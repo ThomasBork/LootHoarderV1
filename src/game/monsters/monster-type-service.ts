@@ -44,6 +44,11 @@ export class MonsterTypeService {
             }),
             skillTypes: [GameServices.skillTypes.basicAttack]
         };
+
+        this.allMonsterTypes = [
+            this.wolf, 
+            this.snake
+        ];
     }
 
     public getByKey(key: string): MonsterType {

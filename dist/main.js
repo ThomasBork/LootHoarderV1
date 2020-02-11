@@ -579,6 +579,7 @@ exports.ObservableSubscription = ObservableSubscription;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const hero_1 = __webpack_require__(/*! ./heroes/hero */ "./src/game/heroes/hero.ts");
+const arena_1 = __webpack_require__(/*! ./arenas/arena */ "./src/game/arenas/arena.ts");
 class Game {
     load(dbGame) {
         this.dbModel = dbGame;
@@ -587,15 +588,168 @@ class Game {
             hero.load(dbHero);
             return hero;
         });
+        this.arenas = this.dbModel.arenas.map(dbArena => {
+            const arena = new arena_1.Arena();
+            arena.load(dbArena);
+            return arena;
+        });
     }
     update(dTime) {
+        console.log("Game", this.dbModel);
     }
     addHero(hero) {
         this.dbModel.heroes.push(hero.dbModel);
         this.heroes.push(hero);
     }
+    spawnArena(type, level, heroes) {
+        const rooms = type.spawnRooms(level);
+        const dbArena = {
+            typeKey: type.key,
+            startTime: new Date(),
+            level: level,
+            rooms: [],
+            currentRoomIndex: 0
+        };
+        const arena = new arena_1.Arena();
+        arena.load(dbArena);
+        arena.dbModel.rooms = rooms.map(room => room.dbModel);
+        arena.rooms = rooms;
+        this.dbModel.arenas.push(arena.dbModel);
+        this.arenas.push(arena);
+        arena.rooms[0].setHeroes(heroes);
+    }
 }
 exports.Game = Game;
+
+
+/***/ }),
+
+/***/ "./src/game/arenas/arena-room.ts":
+/*!***************************************!*\
+  !*** ./src/game/arenas/arena-room.ts ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const monster_1 = __webpack_require__(/*! ../monsters/monster */ "./src/game/monsters/monster.ts");
+class ArenaRoom {
+    get currentMonster() {
+        return this.monsters[this.dbModel.currentMonsterIndex];
+    }
+    load(dbArenaRoom) {
+        this.dbModel = dbArenaRoom;
+        this.monsters = this.dbModel.monsters.map(dbMonster => {
+            const monster = new monster_1.Monster();
+            monster.load(dbMonster);
+            return monster;
+        });
+    }
+    setHeroes(heroes) {
+        this.heroes = heroes;
+        this.dbModel.heroIds = this.heroes.map(hero => hero.dbModel.id);
+    }
+}
+exports.ArenaRoom = ArenaRoom;
+
+
+/***/ }),
+
+/***/ "./src/game/arenas/arena-type-service.ts":
+/*!***********************************************!*\
+  !*** ./src/game/arenas/arena-type-service.ts ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const arena_room_1 = __webpack_require__(/*! ./arena-room */ "./src/game/arenas/arena-room.ts");
+const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+class ArenaTypeService {
+    initialize() {
+        this.allArenaTypes = [
+            {
+                key: 'summer-forest',
+                name: 'Summer Forest',
+                description: 'Easy monsters!',
+                imageName: 'summer-forest.png',
+                spawnRooms: (level) => {
+                    return this.spawnRooms({
+                        level: level,
+                        amountOfRooms: 10,
+                        amountOfMonstersInEachRoom: 5,
+                        monsterTypes: [
+                            {
+                                weight: 20,
+                                value: game_services_1.GameServices.monsterTypes.wolf
+                            },
+                            {
+                                weight: 10,
+                                value: game_services_1.GameServices.monsterTypes.snake
+                            }
+                        ]
+                    });
+                }
+            }
+        ];
+    }
+    getByKey(key) {
+        return this.allArenaTypes.find(type => type.key === key);
+    }
+    spawnRooms(settings) {
+        const arenaRooms = [];
+        for (let currentRoomIndex = 0; currentRoomIndex < settings.amountOfRooms; currentRoomIndex++) {
+            const dbMonsters = [];
+            for (let currentMonsterIndex = 0; currentMonsterIndex < settings.amountOfMonstersInEachRoom; currentMonsterIndex++) {
+                const monsterType = game_services_1.GameServices.random.getWeightedValue(settings.monsterTypes);
+                const dbMonster = game_services_1.GameServices.monsters.createDBMonster(settings.level, monsterType);
+                dbMonsters.push(dbMonster);
+            }
+            const dbArenaRoom = {
+                currentMonsterIndex: 0,
+                heroIds: [],
+                monsters: dbMonsters
+            };
+            const arenaRoom = new arena_room_1.ArenaRoom();
+            arenaRoom.load(dbArenaRoom);
+            arenaRooms.push(arenaRoom);
+        }
+        return arenaRooms;
+    }
+}
+exports.ArenaTypeService = ArenaTypeService;
+
+
+/***/ }),
+
+/***/ "./src/game/arenas/arena.ts":
+/*!**********************************!*\
+  !*** ./src/game/arenas/arena.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const arena_room_1 = __webpack_require__(/*! ./arena-room */ "./src/game/arenas/arena-room.ts");
+const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+class Arena {
+    load(dbArena) {
+        this.dbModel = dbArena;
+        this.type = game_services_1.GameServices.arenaTypes.getByKey(dbArena.typeKey);
+        this.rooms = dbArena.rooms.map(dbRoom => {
+            const room = new arena_room_1.ArenaRoom();
+            room.load(dbRoom);
+            return room;
+        });
+    }
+}
+exports.Arena = Arena;
 
 
 /***/ }),
@@ -758,10 +912,13 @@ class GameController {
                     level: 1,
                     experience: 0,
                     isAlive: true
-                }]
+                }],
+            arenas: []
         };
         this.game = new Game_1.Game();
         this.game.load(dbGame);
+        const arenaType = game_services_1.GameServices.arenaTypes.allArenaTypes[0];
+        this.game.spawnArena(arenaType, 1, [this.game.heroes[0]]);
         this.gameRunner.beginUpdating(this.game);
     }
 }
@@ -834,16 +991,21 @@ const random_service_1 = __webpack_require__(/*! ./shared/random-service */ "./s
 const skill_type_service_1 = __webpack_require__(/*! ./skills/skill-type-service */ "./src/game/skills/skill-type-service.ts");
 const monster_type_service_1 = __webpack_require__(/*! ./monsters/monster-type-service */ "./src/game/monsters/monster-type-service.ts");
 const monster_service_1 = __webpack_require__(/*! ./monsters/monster-service */ "./src/game/monsters/monster-service.ts");
+const arena_type_service_1 = __webpack_require__(/*! ./arenas/arena-type-service */ "./src/game/arenas/arena-type-service.ts");
 class GameServices {
     constructor() { }
     ;
     static initialize() {
+        GameServices.arenaTypes = new arena_type_service_1.ArenaTypeService();
+        GameServices.arenaTypes.initialize();
         GameServices.attributeTypes = new attribute_type_service_1.AttributeTypeService();
         GameServices.attributeTypes.initialize();
+        GameServices.skillTypes = new skill_type_service_1.SkillTypeService();
+        GameServices.skillTypes.initialize();
         GameServices.monsterTypes = new monster_type_service_1.MonsterTypeService();
+        GameServices.monsterTypes.initialize();
         GameServices.monsters = new monster_service_1.MonsterService();
         GameServices.random = new random_service_1.RandomService();
-        GameServices.skillTypes = new skill_type_service_1.SkillTypeService();
         GameServices.version = new version_service_1.VersionService();
     }
 }
@@ -977,6 +1139,10 @@ class MonsterTypeService {
             }),
             skillTypes: [game_services_1.GameServices.skillTypes.basicAttack]
         };
+        this.allMonsterTypes = [
+            this.wolf,
+            this.snake
+        ];
     }
     getByKey(key) {
         return this.allMonsterTypes.find(type => type.key === key);

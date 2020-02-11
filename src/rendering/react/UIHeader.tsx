@@ -5,7 +5,7 @@ export class UIHeader extends React.Component<{versionNumber: string, onNewGameC
         return (
             <div id="header">
                 <span className="title-container">
-                    <span className="title">Quiet Village</span>
+                    <span className="title">Loot Hoarder</span>
                     <span className="version-number">v{this.props.versionNumber}</span>
                 </span>
                 <span className="button btn-new-game" onClick={this.props.onNewGameClick}>New game</span>

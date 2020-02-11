@@ -4,8 +4,10 @@ import { RandomService } from "./shared/random-service";
 import { SkillTypeService } from "./skills/skill-type-service";
 import { MonsterTypeService } from "./monsters/monster-type-service";
 import { MonsterService } from "./monsters/monster-service";
+import { ArenaTypeService } from "./arenas/arena-type-service";
 
 export class GameServices {
+    public static arenaTypes: ArenaTypeService;
     public static attributeTypes: AttributeTypeService;
     public static monsterTypes: MonsterTypeService;
     public static monsters: MonsterService;
@@ -16,16 +18,22 @@ export class GameServices {
     private constructor () {};
 
     public static initialize() {
+        GameServices.arenaTypes = new ArenaTypeService();
+        GameServices.arenaTypes.initialize();
+
         GameServices.attributeTypes = new AttributeTypeService();
         GameServices.attributeTypes.initialize();
+        
+        GameServices.skillTypes = new SkillTypeService();
+        GameServices.skillTypes.initialize();
 
         GameServices.monsterTypes = new MonsterTypeService();
+        GameServices.monsterTypes.initialize();
 
         GameServices.monsters = new MonsterService();
 
         GameServices.random = new RandomService();
 
-        GameServices.skillTypes = new SkillTypeService();
 
         GameServices.version = new VersionService();
     }

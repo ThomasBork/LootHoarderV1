@@ -16,7 +16,7 @@ export class ArenaTypeService {
                 description: 'Easy monsters!',
                 imageName: 'summer-forest.png',
                 spawnRooms: (level: number) => {
-                    this.spawnRooms({
+                    return this.spawnRooms({
                         level: level,
                         amountOfRooms: 10,
                         amountOfMonstersInEachRoom: 5,
@@ -34,6 +34,10 @@ export class ArenaTypeService {
                 }
             }
         ];
+    }
+
+    public getByKey(key: string): ArenaType {
+        return this.allArenaTypes.find(type => type.key === key);
     }
 
     private spawnRooms(settings: {

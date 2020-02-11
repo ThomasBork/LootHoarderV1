@@ -2,6 +2,7 @@ import { Game } from "./Game";
 import { GameRunner } from "./game-runner";
 import { DBGame } from "../game-state/db-game";
 import { GameServices } from "./game-services";
+import { DBArena } from "../game-state/db-arena";
 
 export class GameController {
     public game: Game;
@@ -21,11 +22,15 @@ export class GameController {
                 level: 1,
                 experience: 0,
                 isAlive: true
-            }]
+            }],
+            arenas: []
         };
 
         this.game = new Game();
         this.game.load(dbGame);
+
+        const arenaType = GameServices.arenaTypes.allArenaTypes[0];
+        this.game.spawnArena(arenaType, 1, [this.game.heroes[0]]);
 
         this.gameRunner.beginUpdating(this.game);
     }
