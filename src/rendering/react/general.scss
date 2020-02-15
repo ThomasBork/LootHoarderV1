@@ -48,3 +48,9 @@
     background-color: $blue;
     display: block;
 }
+
+.draggable-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}

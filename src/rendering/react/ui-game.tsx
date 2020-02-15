@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Game } from "../../game/game";
-import { GameContext } from "./UIGameContext";
-import { UIHeader } from "./UIHeader";
-import { UIBody } from "./UIBody";
+import { GameContext } from "./ui-game-context";
+import { UIHeader } from "./ui-header";
+import { UIBody } from "./ui-body";
 import { GameController } from "../../game/game-controller";
 import { GameServices } from "../../game/game-services";
 

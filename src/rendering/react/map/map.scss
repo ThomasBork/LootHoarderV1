@@ -1,0 +1,15 @@
+#map-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    
+}
+.map {
+    position: relative;
+    
+    .arena-type {
+        position: absolute;
+        background-color: grey;
+    }
+}

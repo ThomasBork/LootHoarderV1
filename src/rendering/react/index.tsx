@@ -3,8 +3,9 @@ import * as ReactDOM from "react-dom";
 
 import './general.scss';
 import './structure.scss';
+import './map/map.scss'
 
-import { UIGame } from "./UIGame";
+import { UIGame } from "./ui-game";
 import { GameServices } from "../../game/game-services";
 
 GameServices.initialize();

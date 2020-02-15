@@ -9,12 +9,37 @@ import { GameServices } from '../game-services';
 export class ArenaTypeService {
     public allArenaTypes: ArenaType[];
     public initialize (): void {
-        this.allArenaTypes = [
-            <ArenaType> {
-                key: 'summer-forest',
-                name: 'Summer Forest',
+        this.allArenaTypes = <ArenaType[]>[
+             {
+                key: 'forest',
+                name: 'Forest',
                 description: 'Easy monsters!',
-                imageName: 'summer-forest.png',
+                imageName: 'forest.png',
+                position: {x: 0, y: 0},
+                spawnRooms: (level: number) => {
+                    return this.spawnRooms({
+                        level: level,
+                        amountOfRooms: 10,
+                        amountOfMonstersInEachRoom: 5,
+                        monsterTypes: [
+                            {
+                                weight: 20,
+                                value: GameServices.monsterTypes.wolf
+                            },
+                            {
+                                weight: 10,
+                                value: GameServices.monsterTypes.snake
+                            }
+                        ]
+                    });
+                }
+            },
+            {
+                ke: 'brushlands',
+                name: 'Brushlands',
+                description: 'Also easy monsters!',
+                imageName: 'brushlands.png',
+                position: {x: 1, y: 0},
                 spawnRooms: (level: number) => {
                     return this.spawnRooms({
                         level: level,
