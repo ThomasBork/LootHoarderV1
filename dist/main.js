@@ -613,7 +613,7 @@ class Game {
         });
     }
     update(dTime) {
-        console.log("Game", this.dbModel);
+        //console.log("Game", this.dbModel);
     }
     addHero(hero) {
         this.dbModel.heroes.push(hero.dbModel);
@@ -1450,6 +1450,7 @@ __webpack_require__(/*! ./map/map.scss */ "./src/rendering/react/map/map.scss");
 const ui_game_1 = __webpack_require__(/*! ./ui-game */ "./src/rendering/react/ui-game.tsx");
 const game_services_1 = __webpack_require__(/*! ../../game/game-services */ "./src/game/game-services.ts");
 game_services_1.GameServices.initialize();
+var game = "hej";
 ReactDOM.render(React.createElement(ui_game_1.UIGame, null), document.getElementById("game-container"));
 
 
@@ -1636,10 +1637,14 @@ const React = __webpack_require__(/*! react */ "react");
 class UIDraggableContainer extends React.Component {
     constructor(props) {
         super(props);
+        // Constants
         this.minZoom = 0.2;
         this.maxZoom = 2;
         this.wheelZoomEffect = 0.001;
         this.keyboardScrollSpeed = 1000;
+        // Mouse movement
+        this.isDragging = false;
+        // Keyboard movement
         this.keysDown = [];
         this.state = {
             translate: { x: 0, y: 0 },
@@ -1657,24 +1662,69 @@ class UIDraggableContainer extends React.Component {
         this.setState({ zoom: newZoom });
         return newZoom;
     }
+    getContainerFromEventTarget(eventTarget) {
+        const targetElement = eventTarget;
+        const isContainer = targetElement.classList.contains('.draggable-container');
+        const container = isContainer ? targetElement : targetElement.closest('.draggable-container');
+        return container;
+    }
     onWheel(wheelEvent) {
-        let zoom = this.state.zoom - this.wheelZoomEffect * wheelEvent.deltaY;
-        const domElement = wheelEvent.target.closest('.draggable-container');
+        const containerHTMLElement = this.getContainerFromEventTarget(wheelEvent.target);
+        const viewPortX = wheelEvent.clientX - containerHTMLElement.offsetLeft;
+        const viewPortY = wheelEvent.clientY - containerHTMLElement.offsetTop;
         const previousZoom = this.state.zoom;
-        const newZoom = this.setZoom(zoom);
-        const zoomChange = newZoom / previousZoom;
-        const localX = wheelEvent.clientX - domElement.offsetLeft;
-        const localY = wheelEvent.clientY - domElement.offsetTop;
-        const xFactor = localX / domElement.clientWidth;
-        const yFactor = localY / domElement.clientHeight;
-        const deltaX = (domElement.clientWidth * xFactor * zoomChange);
-        const deltaY = (domElement.clientHeight * yFactor * zoomChange);
+        const previousTranslateX = this.state.translate.x;
+        const previousTranslateY = this.state.translate.y;
+        const previousActualX = viewPortX / previousZoom - previousTranslateX;
+        const previousActualY = viewPortY / previousZoom - previousTranslateY;
+        const initialNewZoom = this.state.zoom - this.wheelZoomEffect * wheelEvent.deltaY;
+        const actualNewZoom = this.setZoom(initialNewZoom);
+        const newTranslateX = viewPortX / actualNewZoom - previousActualX;
+        const newTranslateY = viewPortY / actualNewZoom - previousActualY;
         this.setState({
             translate: {
-                x: this.state.translate.x + deltaX,
-                y: this.state.translate.y + deltaY
+                x: newTranslateX,
+                y: newTranslateY
             }
         });
+    }
+    onMouseDown(mouseEvent) {
+        const containerHTMLElement = this.getContainerFromEventTarget(mouseEvent.target);
+        this.isDragging = true;
+        const viewPortX = mouseEvent.clientX - containerHTMLElement.offsetLeft;
+        const viewPortY = mouseEvent.clientY - containerHTMLElement.offsetTop;
+        const zoom = this.state.zoom;
+        const translateX = this.state.translate.x;
+        const translateY = this.state.translate.y;
+        const actualX = viewPortX / zoom - translateX;
+        const actualY = viewPortY / zoom - translateY;
+        this.dragTranslateX = translateX;
+        this.dragTranslateY = translateY;
+        this.dragActualX = actualX;
+        this.dragActualY = actualY;
+    }
+    onMouseUp(mouseEvent) {
+        this.isDragging = false;
+    }
+    onMouseMove(mouseEvent) {
+        if (this.isDragging) {
+            const containerHTMLElement = this.getContainerFromEventTarget(mouseEvent.target);
+            const viewPortX = mouseEvent.clientX - containerHTMLElement.offsetLeft;
+            const viewPortY = mouseEvent.clientY - containerHTMLElement.offsetTop;
+            const zoom = this.state.zoom;
+            const actualX = viewPortX / zoom - this.dragTranslateX;
+            const actualY = viewPortY / zoom - this.dragTranslateY;
+            const deltaX = actualX - this.dragActualX;
+            const deltaY = actualY - this.dragActualY;
+            const newTranslateX = this.dragTranslateX + deltaX;
+            const newTranslateY = this.dragTranslateY + deltaY;
+            this.setState({
+                translate: {
+                    x: newTranslateX,
+                    y: newTranslateY
+                }
+            });
+        }
     }
     handleKeyDown(keyCode) {
         if (!this.keysDown.includes(keyCode)) {
@@ -1727,7 +1777,7 @@ class UIDraggableContainer extends React.Component {
         document.removeEventListener("keyup", this.documentKeyUpHandler, false);
     }
     render() {
-        return (React.createElement("div", { className: "draggable-container", onWheel: (event) => this.onWheel(event) },
+        return (React.createElement("div", { className: "draggable-container", onWheel: (event) => this.onWheel(event), onMouseDown: (event) => this.onMouseDown(event), onMouseUp: (event) => this.onMouseUp(event), onMouseMove: (event) => this.onMouseMove(event) },
             React.createElement("div", { className: "draggable", style: this.getDraggableStyles() }, this.props.children)));
     }
 }

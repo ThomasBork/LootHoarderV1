@@ -26,7 +26,7 @@ export class Game {
     }
 
     public update (dTime: number): void {
-        console.log("Game", this.dbModel);
+        //console.log("Game", this.dbModel);
     }
 
     public addHero(hero: Hero): void {
@@ -42,7 +42,7 @@ export class Game {
             level: level,
             rooms: [],
             currentRoomIndex: 0
-        }
+        };
         const arena = new Arena();
         arena.load(dbArena);
 

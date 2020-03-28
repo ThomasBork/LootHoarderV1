@@ -1,4 +1,5 @@
 var path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: "development",
@@ -43,6 +44,16 @@ module.exports = {
             }
         ]
     },
+
+    plugins: [
+        new CopyPlugin([
+            { from: 'index.html' },
+            { from: './node_modules/react/umd/react.development.js' },
+            { from: './node_modules/react-dom/umd/react-dom.development.js' },
+            { from: 'img', to: 'img' },
+            { from: 'style', to: 'style' }
+        ])
+    ],
 
     // When importing a module whose path matches one of the following, just
     // assume a corresponding global variable exists and use that instead.
