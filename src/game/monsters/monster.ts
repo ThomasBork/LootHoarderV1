@@ -3,12 +3,16 @@ import { Attributes } from "../attributes/attributes";
 import { MonsterType } from "./monster-type";
 import { Observable, ObservableFactory } from "../../common/Observable";
 import { GameServices } from "../game-services";
+import { Skill } from "../skills/skill";
 
 export class Monster {
     private dbModel: DBMonster;
-    public attributes: Attributes;
     public type: MonsterType;
+    public attributes: Attributes;
+    public skills: Skill[];
     public onDeath: Observable = ObservableFactory.create();
+
+    public get id(): number { return this.dbModel.id }
 
     public get currentHealth(): number {
         return this.dbModel.currentHealth;
@@ -25,6 +29,11 @@ export class Monster {
         this.dbModel = dbMonster;
         this.attributes = Attributes.create();
         this.type = GameServices.monsterTypes.getByKey(this.dbModel.typeKey);
+        this.skills = this.dbModel.skills.map(dbSkill => {
+            const skill = new Skill();
+            skill.load(dbSkill);
+            return skill;
+        });
     }
 
     public recalculateAttributes(): void {

@@ -97,7 +97,7 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".flexbox {\n  display: flex; }\n\n.flexbox-between {\n  display: flex;\n  justify-content: space-between; }\n\n.flexbox-column {\n  display: flex;\n  flex-direction: column; }\n\n.flexbox-column-between {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between; }\n\n.button {\n  background-color: #9999BB;\n  border: 2px solid grey;\n  display: inline-block;\n  padding-left: 15px;\n  padding-right: 15px;\n  cursor: pointer; }\n\n.large-list-card {\n  background-color: #BB9955;\n  border: 2px solid grey;\n  min-height: 150px;\n  width: 600px;\n  margin-bottom: 5px; }\n\n.progress-bar {\n  width: 100%;\n  height: 10px;\n  background-color: #141414;\n  border: 1px solid grey; }\n\n.progress-bar .bar {\n  height: 100%;\n  background-color: #9999BB;\n  display: block; }\n\n.draggable-container {\n  overflow: hidden;\n  width: 100%;\n  height: 100%; }\n", ""]);
+exports.push([module.i, ".flexbox {\n  display: flex; }\n\n.flexbox-between {\n  display: flex;\n  justify-content: space-between; }\n\n.flexbox-column {\n  display: flex;\n  flex-direction: column; }\n\n.flexbox-column-between {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between; }\n\n.button {\n  background-color: #9999BB;\n  border: 2px solid grey;\n  display: inline-block;\n  padding-left: 15px;\n  padding-right: 15px;\n  cursor: pointer; }\n\nbutton {\n  padding: 10px;\n  background-color: #3333FF;\n  border: 1px solid black;\n  cursor: pointer;\n  color: white; }\n  button:hover {\n    background-color: #6666FF; }\n\n.large-list-card {\n  background-color: #BB9955;\n  border: 2px solid grey;\n  min-height: 150px;\n  width: 600px;\n  margin-bottom: 5px; }\n\n.progress-bar {\n  width: 100%;\n  height: 10px;\n  background-color: #141414;\n  border: 1px solid grey; }\n\n.progress-bar .bar {\n  height: 100%;\n  background-color: #9999BB;\n  display: block; }\n\n.draggable-container {\n  overflow: hidden;\n  width: 100%;\n  height: 100%; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -115,7 +115,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "#map-container {\n  height: 100%;\n  width: 100%;\n  overflow: hidden; }\n\n.map {\n  position: relative; }\n  .map .arena-type {\n    position: absolute;\n    background-color: grey; }\n", ""]);
+exports.push([module.i, "#map-body-container {\n  height: 100%;\n  width: 100%;\n  display: flex; }\n  #map-body-container .info-panel {\n    width: 300px;\n    background-color: #87583A;\n    border-right: 1px solid black; }\n    #map-body-container .info-panel .heroes {\n      display: flex; }\n      #map-body-container .info-panel .heroes .hero {\n        position: relative; }\n        #map-body-container .info-panel .heroes .hero .checkmark {\n          position: absolute;\n          height: 64px;\n          width: 64px;\n          bottom: 0;\n          right: 0; }\n  #map-body-container .map-container {\n    flex: 1 1 auto;\n    background-color: #B77C57; }\n    #map-body-container .map-container .map {\n      position: relative; }\n      #map-body-container .map-container .map .arena-type {\n        position: absolute;\n        background-size: 100% 100%;\n        border: 1px solid black;\n        cursor: pointer;\n        opacity: 0.7; }\n        #map-body-container .map-container .map .arena-type:hover {\n          opacity: 1; }\n        #map-body-container .map-container .map .arena-type .header {\n          display: flex;\n          justify-content: space-between; }\n          #map-body-container .map-container .map .arena-type .header .name, #map-body-container .map-container .map .arena-type .header .level {\n            padding: 5px;\n            border-bottom: 1px solid black;\n            background-color: #CEA68D;\n            color: black; }\n          #map-body-container .map-container .map .arena-type .header .name {\n            border-right: 1px solid black; }\n          #map-body-container .map-container .map .arena-type .header .level {\n            border-left: 1px solid black; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -133,7 +133,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body {\n  background-color: #141414;\n  color: #f2f2f2;\n  user-select: none; }\n\n/* Header */\n#header {\n  width: 100%;\n  height: 50px;\n  background-color: #303030;\n  display: flex;\n  justify-content: space-between;\n  padding: 5px; }\n  #header .title-container {\n    display: flex;\n    flex-direction: column; }\n    #header .title-container .title {\n      font-size: 25px; }\n    #header .title-container .version-number {\n      font-size: 10px; }\n  #header .btn-new-game {\n    padding-top: 8px; }\n\n/* Body */\n#body {\n  padding: 10px; }\n\n.tabs {\n  display: flex; }\n  .tabs .tab {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    border: 1px solid grey;\n    padding: 15px;\n    cursor: pointer;\n    user-select: none; }\n    .tabs .tab.active {\n      border-color: white; }\n\n.tab-body {\n  width: 1400px;\n  height: 800px;\n  border: 1px solid white; }\n", ""]);
+exports.push([module.i, "body {\n  background-color: #141414;\n  color: #f2f2f2;\n  user-select: none; }\n\n/* Header */\n#header {\n  width: 100%;\n  height: 50px;\n  background-color: #303030;\n  display: flex;\n  justify-content: space-between;\n  padding: 5px; }\n  #header .title-container {\n    display: flex;\n    flex-direction: column; }\n    #header .title-container .title {\n      font-size: 25px; }\n    #header .title-container .version-number {\n      font-size: 10px; }\n  #header .btn-new-game {\n    padding-top: 8px; }\n\n/* Body */\n#body {\n  padding: 10px; }\n\n.tabs {\n  display: flex;\n  margin-bottom: 1px; }\n  .tabs .tab {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding: 15px;\n    cursor: pointer;\n    user-select: none;\n    background-color: #B77C57; }\n    .tabs .tab.active {\n      background-color: #87583A; }\n    .tabs .tab:hover:not(.active) {\n      background-color: #996342; }\n\n.tab-body {\n  width: 1400px;\n  height: 800px; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -601,7 +601,7 @@ const arena_1 = __webpack_require__(/*! ./arenas/arena */ "./src/game/arenas/are
 class Game {
     load(dbGame) {
         this.dbModel = dbGame;
-        this.heroes = this.dbModel.heroes.map(dbHero => {
+        const heroes = this.heroes = this.dbModel.heroes.map(dbHero => {
             const hero = new hero_1.Hero();
             hero.load(dbHero);
             return hero;
@@ -635,6 +635,7 @@ class Game {
         this.dbModel.arenas.push(arena.dbModel);
         this.arenas.push(arena);
         arena.rooms[0].setHeroes(heroes);
+        return arena;
     }
 }
 exports.Game = Game;
@@ -685,17 +686,19 @@ exports.ArenaRoom = ArenaRoom;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+const arena_type_1 = __webpack_require__(/*! ./arena-type */ "./src/game/arenas/arena-type.ts");
 const arena_room_1 = __webpack_require__(/*! ./arena-room */ "./src/game/arenas/arena-room.ts");
 const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
 class ArenaTypeService {
     initialize() {
         this.allArenaTypes = [
-            {
+            arena_type_1.ArenaType.create({
                 key: 'forest',
                 name: 'Forest',
                 description: 'Easy monsters!',
                 imageName: 'forest.png',
                 position: { x: 0, y: 0 },
+                level: 1,
                 spawnRooms: (level) => {
                     return this.spawnRooms({
                         level: level,
@@ -713,13 +716,14 @@ class ArenaTypeService {
                         ]
                     });
                 }
-            },
-            {
-                ke: 'brushlands',
+            }),
+            arena_type_1.ArenaType.create({
+                key: 'brushlands',
                 name: 'Brushlands',
                 description: 'Also easy monsters!',
                 imageName: 'brushlands.png',
                 position: { x: 1, y: 0 },
+                level: 5,
                 spawnRooms: (level) => {
                     return this.spawnRooms({
                         level: level,
@@ -737,7 +741,7 @@ class ArenaTypeService {
                         ]
                     });
                 }
-            }
+            })
         ];
     }
     getByKey(key) {
@@ -765,6 +769,34 @@ class ArenaTypeService {
     }
 }
 exports.ArenaTypeService = ArenaTypeService;
+
+
+/***/ }),
+
+/***/ "./src/game/arenas/arena-type.ts":
+/*!***************************************!*\
+  !*** ./src/game/arenas/arena-type.ts ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+class ArenaType {
+    static create(options) {
+        const arenaType = new ArenaType();
+        arenaType.key = options.key;
+        arenaType.name = options.name;
+        arenaType.description = options.description;
+        arenaType.imageName = options.imageName;
+        arenaType.position = options.position;
+        arenaType.level = options.level;
+        arenaType.spawnRooms = options.spawnRooms;
+        return arenaType;
+    }
+}
+exports.ArenaType = ArenaType;
 
 
 /***/ }),
@@ -951,10 +983,15 @@ class GameController {
             startTime: new Date(),
             heroes: [{
                     id: 0,
+                    typeKey: 'warrior',
                     name: 'Heltefar',
                     level: 1,
                     experience: 0,
-                    isAlive: true
+                    isAlive: true,
+                    skills: [{
+                            typeKey: 'basic-attack',
+                            remainingCooldown: 0
+                        }]
                 }],
             arenas: []
         };
@@ -1035,6 +1072,7 @@ const skill_type_service_1 = __webpack_require__(/*! ./skills/skill-type-service
 const monster_type_service_1 = __webpack_require__(/*! ./monsters/monster-type-service */ "./src/game/monsters/monster-type-service.ts");
 const monster_service_1 = __webpack_require__(/*! ./monsters/monster-service */ "./src/game/monsters/monster-service.ts");
 const arena_type_service_1 = __webpack_require__(/*! ./arenas/arena-type-service */ "./src/game/arenas/arena-type-service.ts");
+const hero_type_service_1 = __webpack_require__(/*! ./heroes/hero-type-service */ "./src/game/heroes/hero-type-service.ts");
 class GameServices {
     constructor() { }
     ;
@@ -1045,6 +1083,8 @@ class GameServices {
         GameServices.attributeTypes.initialize();
         GameServices.skillTypes = new skill_type_service_1.SkillTypeService();
         GameServices.skillTypes.initialize();
+        GameServices.heroTypes = new hero_type_service_1.HeroTypeService();
+        GameServices.heroTypes.initialize();
         GameServices.monsterTypes = new monster_type_service_1.MonsterTypeService();
         GameServices.monsterTypes.initialize();
         GameServices.monsters = new monster_service_1.MonsterService();
@@ -1053,6 +1093,63 @@ class GameServices {
     }
 }
 exports.GameServices = GameServices;
+
+
+/***/ }),
+
+/***/ "./src/game/heroes/hero-type-service.ts":
+/*!**********************************************!*\
+  !*** ./src/game/heroes/hero-type-service.ts ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const hero_type_1 = __webpack_require__(/*! ./hero-type */ "./src/game/heroes/hero-type.ts");
+class HeroTypeService {
+    initialize() {
+        this.warrior = hero_type_1.HeroType.create({
+            key: 'warrior',
+            name: 'Warrior',
+            description: 'Fights with brute force and no hesitation',
+            imageName: 'warrior.png'
+        });
+        this.allHeroTypes = [
+            this.warrior
+        ];
+    }
+    getByKey(key) {
+        return this.allHeroTypes.find(type => type.key === key);
+    }
+}
+exports.HeroTypeService = HeroTypeService;
+
+
+/***/ }),
+
+/***/ "./src/game/heroes/hero-type.ts":
+/*!**************************************!*\
+  !*** ./src/game/heroes/hero-type.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+class HeroType {
+    static create(options) {
+        const heroType = new HeroType();
+        heroType.key = options.key;
+        heroType.name = options.name;
+        heroType.description = options.description;
+        heroType.imageName = options.imageName;
+        return heroType;
+    }
+}
+exports.HeroType = HeroType;
 
 
 /***/ }),
@@ -1069,10 +1166,13 @@ exports.GameServices = GameServices;
 Object.defineProperty(exports, "__esModule", { value: true });
 const attributes_1 = __webpack_require__(/*! ../attributes/attributes */ "./src/game/attributes/attributes.ts");
 const Observable_1 = __webpack_require__(/*! ../../common/Observable */ "./src/common/Observable.ts");
+const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
 class Hero {
     constructor() {
         this.onDeath = Observable_1.ObservableFactory.create();
     }
+    get id() { return this.dbModel.id; }
+    get name() { return this.dbModel.name; }
     get currentHealth() {
         return this.dbModel.currentHealth;
     }
@@ -1089,6 +1189,7 @@ class Hero {
         if (this.dbModel.currentHealth === undefined) {
             this.dbModel.currentHealth = this.attributes.maximumHealth.value;
         }
+        this.type = game_services_1.GameServices.heroTypes.getByKey(this.dbModel.typeKey);
     }
 }
 exports.Hero = Hero;
@@ -1144,11 +1245,12 @@ exports.MonsterService = MonsterService;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+const monster_type_1 = __webpack_require__(/*! ./monster-type */ "./src/game/monsters/monster-type.ts");
 const attributes_1 = __webpack_require__(/*! ../attributes/attributes */ "./src/game/attributes/attributes.ts");
 const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
 class MonsterTypeService {
     initialize() {
-        this.wolf = {
+        this.wolf = monster_type_1.MonsterType.create({
             key: 'wolf',
             name: 'Wolf',
             description: 'A mighty wolf',
@@ -1165,8 +1267,8 @@ class MonsterTypeService {
                 maximumHealth: 20
             }),
             skillTypes: [game_services_1.GameServices.skillTypes.basicAttack]
-        };
-        this.snake = {
+        });
+        this.snake = monster_type_1.MonsterType.create({
             key: 'snake',
             name: 'Snake',
             description: 'A cunning snake',
@@ -1181,7 +1283,7 @@ class MonsterTypeService {
                 maximumHealth: 12
             }),
             skillTypes: [game_services_1.GameServices.skillTypes.basicAttack]
-        };
+        });
         this.allMonsterTypes = [
             this.wolf,
             this.snake
@@ -1192,6 +1294,34 @@ class MonsterTypeService {
     }
 }
 exports.MonsterTypeService = MonsterTypeService;
+
+
+/***/ }),
+
+/***/ "./src/game/monsters/monster-type.ts":
+/*!*******************************************!*\
+  !*** ./src/game/monsters/monster-type.ts ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+class MonsterType {
+    static create(options) {
+        const monsterType = new MonsterType();
+        monsterType.key = options.key;
+        monsterType.name = options.name;
+        monsterType.description = options.description;
+        monsterType.imageName = options.imageName;
+        monsterType.attributesBase = options.attributesBase;
+        monsterType.attributesPerLevel = options.attributesPerLevel;
+        monsterType.skillTypes = options.skillTypes;
+        return monsterType;
+    }
+}
+exports.MonsterType = MonsterType;
 
 
 /***/ }),
@@ -1209,10 +1339,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const attributes_1 = __webpack_require__(/*! ../attributes/attributes */ "./src/game/attributes/attributes.ts");
 const Observable_1 = __webpack_require__(/*! ../../common/Observable */ "./src/common/Observable.ts");
 const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+const skill_1 = __webpack_require__(/*! ../skills/skill */ "./src/game/skills/skill.ts");
 class Monster {
     constructor() {
         this.onDeath = Observable_1.ObservableFactory.create();
     }
+    get id() { return this.dbModel.id; }
     get currentHealth() {
         return this.dbModel.currentHealth;
     }
@@ -1227,6 +1359,11 @@ class Monster {
         this.dbModel = dbMonster;
         this.attributes = attributes_1.Attributes.create();
         this.type = game_services_1.GameServices.monsterTypes.getByKey(this.dbModel.typeKey);
+        this.skills = this.dbModel.skills.map(dbSkill => {
+            const skill = new skill_1.Skill();
+            skill.load(dbSkill);
+            return skill;
+        });
     }
     recalculateAttributes() {
         this.type.attributesBase.all.forEach(attr => this.attributes.get(attr.type).amount.setAdditiveModifier(attr, attr.amount.value));
@@ -1338,6 +1475,25 @@ exports.ValueContainer = ValueContainer;
 
 /***/ }),
 
+/***/ "./src/game/skills/damage-type.ts":
+/*!****************************************!*\
+  !*** ./src/game/skills/damage-type.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var DamageType;
+(function (DamageType) {
+    DamageType[DamageType["physical"] = 0] = "physical";
+    DamageType[DamageType["magic"] = 1] = "magic";
+})(DamageType = exports.DamageType || (exports.DamageType = {}));
+
+
+/***/ }),
+
 /***/ "./src/game/skills/skill-type-service.ts":
 /*!***********************************************!*\
   !*** ./src/game/skills/skill-type-service.ts ***!
@@ -1348,32 +1504,108 @@ exports.ValueContainer = ValueContainer;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+const skill_type_1 = __webpack_require__(/*! ./skill-type */ "./src/game/skills/skill-type.ts");
 const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+const damage_type_1 = __webpack_require__(/*! ./damage-type */ "./src/game/skills/damage-type.ts");
 class SkillTypeService {
     initialize() {
-        this.basicAttack = {
+        this.basicAttack = skill_type_1.SkillType.create({
             key: "basic-attack",
+            name: 'Attack',
+            description: 'Deals physical damage to a single enemy',
             cooldown: 1000,
             energyCost: 0,
-            effect: (user, arenaRoom) => {
+            requiresTarget: true,
+            effect: (user, target, arenaRoom) => {
                 let damage = user.attributes.attackDamage.value;
                 const isCriticalStrike = game_services_1.GameServices.random.rollSuccess(user.attributes.attackCriticalMultiplier.value);
                 if (isCriticalStrike) {
                     damage *= user.attributes.attackCriticalMultiplier.value;
                 }
-                this.dealDamage(arenaRoom.currentMonster, damage);
+                this.dealDamage(target, damage, damage_type_1.DamageType.physical);
             }
-        };
+        });
+        this.allSkillTypes = [
+            this.basicAttack
+        ];
     }
-    dealDamage(damageReceiver, damage) {
-        const damageReceived = this.reduceDamageBasedOnArmor(damage, damageReceiver.attributes.armor.value);
-        damageReceiver.currentHealth -= damageReceived;
+    getByKey(key) {
+        return this.allSkillTypes.find(type => type.key === key);
+    }
+    dealDamage(damageReceiver, damage, damageType) {
+        switch (damageType) {
+            case damage_type_1.DamageType.physical: {
+                const damageReceived = this.reduceDamageBasedOnArmor(damage, damageReceiver.attributes.armor.value);
+                damageReceiver.currentHealth -= damageReceived;
+                break;
+            }
+            case damage_type_1.DamageType.magic: {
+                const damageReceived = this.reduceDamageBasedOnArmor(damage, damageReceiver.attributes.armor.value);
+                damageReceiver.currentHealth -= damageReceived;
+                break;
+            }
+            default:
+                throw { message: 'Unknown damage type: ' + damageType };
+        }
     }
     reduceDamageBasedOnArmor(damage, armor) {
         return damage * 100 / (100 + armor);
     }
+    reduceDamageBasedOnMagicResistance(damage, magicResistance) {
+        return damage * 100 / (100 + magicResistance);
+    }
 }
 exports.SkillTypeService = SkillTypeService;
+
+
+/***/ }),
+
+/***/ "./src/game/skills/skill-type.ts":
+/*!***************************************!*\
+  !*** ./src/game/skills/skill-type.ts ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+class SkillType {
+    static create(options) {
+        const skillType = new SkillType();
+        skillType.key = options.key;
+        skillType.name = options.name;
+        skillType.description = options.description;
+        skillType.cooldown = options.cooldown;
+        skillType.energyCost = options.energyCost;
+        skillType.requiresTarget = options.requiresTarget;
+        skillType.effect = options.effect;
+        return skillType;
+    }
+}
+exports.SkillType = SkillType;
+
+
+/***/ }),
+
+/***/ "./src/game/skills/skill.ts":
+/*!**********************************!*\
+  !*** ./src/game/skills/skill.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+class Skill {
+    load(dbModel) {
+        this.dbModel = dbModel;
+        this.type = game_services_1.GameServices.skillTypes.getByKey(this.dbModel.typeKey);
+    }
+}
+exports.Skill = Skill;
 
 
 /***/ }),
@@ -1432,6 +1664,34 @@ module.exports = exported;
 
 /***/ }),
 
+/***/ "./src/rendering/react/heroes/ui-heroes-body.tsx":
+/*!*******************************************************!*\
+  !*** ./src/rendering/react/heroes/ui-heroes-body.tsx ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = __webpack_require__(/*! react */ "react");
+const game_services_1 = __webpack_require__(/*! ../../../game/game-services */ "./src/game/game-services.ts");
+class UIHeroesBody extends React.Component {
+    get heroes() {
+        return game_services_1.GameServices.currentGame.heroes;
+    }
+    render() {
+        return (React.createElement("div", { id: "heroes-body-container" },
+            React.createElement("ul", { className: "heroes" }, this.heroes.map(hero => React.createElement("li", { key: hero.id },
+                React.createElement("div", null, hero.name),
+                React.createElement("img", { src: `img/heroes/${hero.type.imageName}` }))))));
+    }
+}
+exports.UIHeroesBody = UIHeroesBody;
+
+
+/***/ }),
+
 /***/ "./src/rendering/react/index.tsx":
 /*!***************************************!*\
   !*** ./src/rendering/react/index.tsx ***!
@@ -1450,7 +1710,6 @@ __webpack_require__(/*! ./map/map.scss */ "./src/rendering/react/map/map.scss");
 const ui_game_1 = __webpack_require__(/*! ./ui-game */ "./src/rendering/react/ui-game.tsx");
 const game_services_1 = __webpack_require__(/*! ../../game/game-services */ "./src/game/game-services.ts");
 game_services_1.GameServices.initialize();
-var game = "hej";
 ReactDOM.render(React.createElement(ui_game_1.UIGame, null), document.getElementById("game-container"));
 
 
@@ -1487,6 +1746,61 @@ module.exports = exported;
 
 /***/ }),
 
+/***/ "./src/rendering/react/map/ui-map-arena-type-information.tsx":
+/*!*******************************************************************!*\
+  !*** ./src/rendering/react/map/ui-map-arena-type-information.tsx ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = __webpack_require__(/*! react */ "react");
+const game_services_1 = __webpack_require__(/*! ../../../game/game-services */ "./src/game/game-services.ts");
+class UIMapArenaTypeInformation extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedHeroes: []
+        };
+    }
+    toggleSelectedHero(hero) {
+        if (this.state.selectedHeroes.includes(hero)) {
+            this.setState({
+                selectedHeroes: this.state.selectedHeroes.filter(selectedHero => selectedHero !== hero)
+            });
+        }
+        else {
+            this.setState({
+                selectedHeroes: [...this.state.selectedHeroes, hero]
+            });
+        }
+    }
+    handleStartArenaClicked(arenaType) {
+        if (this.state.selectedHeroes.length > 0) {
+            const arena = game_services_1.GameServices.currentGame.spawnArena(arenaType, arenaType.level, this.state.selectedHeroes);
+            this.props.arenaStarted(arena);
+        }
+    }
+    render() {
+        return (React.createElement("div", null,
+            React.createElement("div", null, `${this.props.arenaType.name} (Lv. ${this.props.arenaType.level})`),
+            React.createElement("div", null, "Heroes"),
+            React.createElement("div", { className: "heroes" }, game_services_1.GameServices.currentGame.heroes.map(hero => React.createElement("div", { key: hero.id, className: "hero", onClick: () => this.toggleSelectedHero(hero) },
+                React.createElement("div", null, hero.name),
+                React.createElement("img", { src: `img/heroes/${hero.type.imageName}` }),
+                this.state.selectedHeroes.includes(hero)
+                    ? React.createElement("div", { className: "checkmark", style: { backgroundImage: "url(img/interface/checkmark.png)" } })
+                    : null))),
+            React.createElement("button", { onClick: () => this.handleStartArenaClicked(this.props.arenaType) }, "Start arena")));
+    }
+}
+exports.UIMapArenaTypeInformation = UIMapArenaTypeInformation;
+
+
+/***/ }),
+
 /***/ "./src/rendering/react/map/ui-map-body.tsx":
 /*!*************************************************!*\
   !*** ./src/rendering/react/map/ui-map-body.tsx ***!
@@ -1500,43 +1814,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const React = __webpack_require__(/*! react */ "react");
 const game_services_1 = __webpack_require__(/*! ../../../game/game-services */ "./src/game/game-services.ts");
 const ui_draggable_container_1 = __webpack_require__(/*! ../shared/ui-draggable-container */ "./src/rendering/react/shared/ui-draggable-container.tsx");
-// export class UIMapBody extends React.Component<{}, {drawOffset: Vector2, zoom: number}> {
+const ui_map_arena_type_information_1 = __webpack_require__(/*! ./ui-map-arena-type-information */ "./src/rendering/react/map/ui-map-arena-type-information.tsx");
 class UIMapBody extends React.Component {
-    constructor() {
-        super(...arguments);
+    constructor(props) {
+        super(props);
         this.arenaTypeWidth = 200;
         this.arenaTypeHeight = 200;
         this.arenaTypeMargin = 10;
+        this.state = {
+            selectedArenaType: undefined
+        };
     }
-    // private minZoom = 0.2;
-    // private maxZoom = 2;
-    // private wheelZoomEffect = 0.001;
-    // private keyboardScrollEffect = 40;
-    // private documentKeyDownHandler: (event: KeyboardEvent) => void;
-    // constructor(props: {}) {
-    //     super(props);
-    //     this.state = {
-    //         drawOffset: {x: 0, y: 0}, 
-    //         zoom: 1
-    //     };
-    // }
     getLeftInPixels(position) {
-        //const value = this.state.drawOffset.x + (position.x * (this.arenaTypeWidth + this.arenaTypeMargin) * this.state.zoom);
         const value = position.x * (this.arenaTypeWidth + this.arenaTypeMargin);
         return value + 'px';
     }
     getTopInPixels(position) {
-        //const value = this.state.drawOffset.y + (position.y * (this.arenaTypeHeight + this.arenaTypeMargin) * this.state.zoom);
         const value = position.y * (this.arenaTypeHeight + this.arenaTypeMargin);
         return value + 'px';
     }
     getWidthtInPixels(width) {
-        //const value = width * this.state.zoom;
         const value = width;
         return value + 'px';
     }
     getHeightInPixels(height) {
-        //const value = height * this.state.zoom;
         const value = height;
         return value + 'px';
     }
@@ -1545,77 +1846,31 @@ class UIMapBody extends React.Component {
             left: this.getLeftInPixels(arenaType.position),
             top: this.getTopInPixels(arenaType.position),
             width: this.getWidthtInPixels(this.arenaTypeWidth),
-            height: this.getHeightInPixels(this.arenaTypeHeight)
+            height: this.getHeightInPixels(this.arenaTypeHeight),
+            backgroundImage: `url(img/arenas/${arenaType.imageName})`
         };
     }
-    // private setZoom(value: number) {
-    //     if (value < this.minZoom) {
-    //         this.setState({zoom: this.minZoom});
-    //     } else if (value > this.maxZoom) {
-    //         this.setState({zoom: this.maxZoom});
-    //     } else {
-    //         this.setState({zoom: value});
-    //     }
-    // }
-    // private onWheel(wheelEvent: React.WheelEvent<HTMLDivElement>): void {
-    //     let zoom = this.state.zoom - this.wheelZoomEffect * wheelEvent.deltaY;
-    //     this.setZoom(zoom);
-    // }
-    // private getMapStyles(): React.CSSProperties {
-    //     return {
-    //         zoom: this.state.zoom * 100 + '%',
-    //         transform: `translate(${this.state.drawOffset.x}px, ${this.state.drawOffset.y}px)`
-    //     };
-    // }
-    // private handleKeyDown(keyCode: number): void {
-    //     let deltaX: number = 0;
-    //     let deltaY: number = 0;
-    //     switch(keyCode) {
-    //         case 37: 
-    //             deltaX = -this.keyboardScrollEffect;
-    //         break;
-    //         case 39: 
-    //             deltaX = this.keyboardScrollEffect;
-    //         break;
-    //         case 38: 
-    //             deltaY = -this.keyboardScrollEffect;
-    //         break;
-    //         case 40: 
-    //             deltaY = this.keyboardScrollEffect;
-    //         break;
-    //     }
-    //     this.setState({
-    //         drawOffset: {
-    //             x: this.state.drawOffset.x + deltaX, 
-    //             y: this.state.drawOffset.y + deltaY
-    //         }
-    //     });
-    // }
-    // public componentWillMount(): void {
-    //     this.documentKeyDownHandler = (event: KeyboardEvent) => {this.handleKeyDown(event.keyCode)}
-    //     document.addEventListener("keydown", this.documentKeyDownHandler, false);
-    // }
-    // public componentWillUnmount(): void {
-    //     document.removeEventListener("keydown", this.documentKeyDownHandler, false);
-    // }
+    selectArenaType(arenaType) {
+        this.setState({ selectedArenaType: arenaType });
+    }
+    handleArenaTypeClick(event, arenaType) {
+        event.stopPropagation();
+        this.selectArenaType(arenaType);
+    }
     render() {
-        return (React.createElement(ui_draggable_container_1.UIDraggableContainer, null,
-            React.createElement("div", { className: "map" }, game_services_1.GameServices.arenaTypes.allArenaTypes.map(arenaType => React.createElement("div", { key: arenaType.key, className: "arena-type", style: this.getArenaTypeStyles(arenaType) }, arenaType.name))))
-        // <div 
-        //     id="map-container"
-        //     onWheel={(event: React.WheelEvent<HTMLDivElement>) => this.onWheel(event)}
-        // >
-        //     <div id="map" style={this.getMapStyles()}>
-        //         {GameServices.arenaTypes.allArenaTypes.map(arenaType => 
-        //             <div 
-        //                 key={arenaType.key} 
-        //                 className="arena-type" 
-        //                 style={this.getArenaTypeStyles(arenaType)}
-        //             >{arenaType.name}</div>
-        //         )}
-        //     </div>
-        // </div>
-        );
+        return (React.createElement("div", { id: "map-body-container" },
+            React.createElement("div", { className: "info-panel" }, this.state.selectedArenaType
+                ?
+                    React.createElement(ui_map_arena_type_information_1.UIMapArenaTypeInformation, { arenaType: this.state.selectedArenaType, arenaStarted: () => { } })
+                : null),
+            React.createElement("div", { className: "map-container" },
+                React.createElement(ui_draggable_container_1.UIDraggableContainer, null,
+                    React.createElement("div", { className: "map" }, game_services_1.GameServices.arenaTypes.allArenaTypes.map(arenaType => React.createElement("div", { key: arenaType.key, className: "arena-type", style: this.getArenaTypeStyles(arenaType), onMouseDown: event => this.handleArenaTypeClick(event, arenaType) },
+                        React.createElement("div", { className: "header" },
+                            React.createElement("span", { className: "name" }, arenaType.name),
+                            React.createElement("span", { className: "level" },
+                                "Lv.",
+                                arenaType.level)))))))));
     }
 }
 exports.UIMapBody = UIMapBody;
@@ -1776,8 +2031,16 @@ class UIDraggableContainer extends React.Component {
         document.removeEventListener("keydown", this.documentKeyDownHandler, false);
         document.removeEventListener("keyup", this.documentKeyUpHandler, false);
     }
+    getClassName() {
+        if (this.props.className) {
+            return `draggable-container ${this.props.className}`;
+        }
+        else {
+            return `draggable-container`;
+        }
+    }
     render() {
-        return (React.createElement("div", { className: "draggable-container", onWheel: (event) => this.onWheel(event), onMouseDown: (event) => this.onMouseDown(event), onMouseUp: (event) => this.onMouseUp(event), onMouseMove: (event) => this.onMouseMove(event) },
+        return (React.createElement("div", { className: this.getClassName(), onWheel: (event) => this.onWheel(event), onMouseDown: (event) => this.onMouseDown(event), onMouseUp: (event) => this.onMouseUp(event), onMouseMove: (event) => this.onMouseMove(event) },
             React.createElement("div", { className: "draggable", style: this.getDraggableStyles() }, this.props.children)));
     }
 }
@@ -1857,40 +2120,41 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const React = __webpack_require__(/*! react */ "react");
 const ui_tab_button_1 = __webpack_require__(/*! ./shared/ui-tab-button */ "./src/rendering/react/shared/ui-tab-button.tsx");
 const ui_map_body_1 = __webpack_require__(/*! ./map/ui-map-body */ "./src/rendering/react/map/ui-map-body.tsx");
+const ui_heroes_body_1 = __webpack_require__(/*! ./heroes/ui-heroes-body */ "./src/rendering/react/heroes/ui-heroes-body.tsx");
 class UIBody extends React.Component {
     constructor(props) {
         super(props);
         this.tabs = [
             {
-                key: 'hero',
-                text: 'Hero',
+                key: 'heroes',
+                text: 'Heroes',
                 imageUrl: 'img/tabs/heroes.png'
             },
             {
                 key: 'combat',
                 text: 'Combat',
-                imageUrl: 'img/tabs/heroes.png'
+                imageUrl: 'img/tabs/combat.png'
             },
             {
                 key: 'map',
                 text: 'Map',
-                imageUrl: 'img/tabs/heroes.png'
+                imageUrl: 'img/tabs/map.png'
             },
             {
                 key: 'quests',
                 text: 'Quests',
-                imageUrl: 'img/tabs/heroes.png'
+                imageUrl: 'img/tabs/quests.png'
             },
         ];
-        this.state = { activeTabKey: "hero" };
+        this.state = { activeTabKey: "heroes" };
     }
     selectTab(tabKey) {
         this.setState({ activeTabKey: tabKey });
     }
     renderCurrentTabBody() {
         switch (this.state.activeTabKey) {
-            case 'hero':
-                return null;
+            case 'heroes':
+                return React.createElement(ui_heroes_body_1.UIHeroesBody, null);
             case 'combat':
                 return null;
             case 'map':
@@ -1951,8 +2215,10 @@ class UIGame extends React.Component {
     }
     newGame() {
         const gameController = new game_controller_1.GameController();
+        game_services_1.GameServices.currentGameController = gameController;
         gameController.initialize();
         gameController.newGame();
+        game_services_1.GameServices.currentGame = gameController.game;
         this.setState({ game: gameController.game });
     }
     render() {
@@ -1961,7 +2227,7 @@ class UIGame extends React.Component {
             this.state.game
                 ?
                     React.createElement(ui_game_context_1.GameContext.Provider, { value: this.state.game },
-                        React.createElement(ui_body_1.UIBody, { game: this.state.game }))
+                        React.createElement(ui_body_1.UIBody, null))
                 : null));
     }
 }

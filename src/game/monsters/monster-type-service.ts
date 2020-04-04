@@ -9,7 +9,7 @@ export class MonsterTypeService {
     public allMonsterTypes: MonsterType[];
 
     public initialize () {
-        this.wolf = <MonsterType> {
+        this.wolf = MonsterType.create({
             key: 'wolf',
             name: 'Wolf',
             description: 'A mighty wolf',
@@ -26,9 +26,9 @@ export class MonsterTypeService {
                 maximumHealth: 20
             }),
             skillTypes: [GameServices.skillTypes.basicAttack]
-        };
+        });
 
-        this.snake = <MonsterType> {
+        this.snake = MonsterType.create({
             key: 'snake',
             name: 'Snake',
             description: 'A cunning snake',
@@ -43,7 +43,7 @@ export class MonsterTypeService {
                 maximumHealth: 12
             }),
             skillTypes: [GameServices.skillTypes.basicAttack]
-        };
+        });
 
         this.allMonsterTypes = [
             this.wolf, 

@@ -1,13 +1,70 @@
-#map-container {
+@import "../colors.scss";
+
+#map-body-container {
     height: 100%;
     width: 100%;
-    overflow: hidden;
-}
-.map {
-    position: relative;
-    
-    .arena-type {
-        position: absolute;
-        background-color: grey;
+    display: flex;
+
+    .info-panel {
+        width: 300px;
+        background-color: $dark-background-color;
+        border-right: 1px solid black;
+
+        .heroes {
+            display: flex;
+
+            .hero {
+                position: relative;
+
+                .checkmark {
+                    position: absolute;
+                    height: 64px;
+                    width: 64px;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .map-container {
+        flex: 1 1 auto;
+        background-color: $background-color;
+
+        .map {
+            position: relative;
+
+            .arena-type {
+                position: absolute;
+                background-size: 100% 100%;
+                border: 1px solid black;
+                cursor: pointer;
+                opacity: 0.7;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .name, .level {
+                        padding: 5px;
+                        border-bottom: 1px solid black;
+                        background-color: $light-background-color;
+                        color: black;
+                    }
+
+                    .name {
+                        border-right: 1px solid black;
+                    }
+
+                    .level {
+                        border-left: 1px solid black;
+                    }
+                }
+            }
+        }
     }
 }

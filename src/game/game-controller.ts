@@ -18,10 +18,15 @@ export class GameController {
             startTime: new Date(),
             heroes: [{
                 id: 0,
+                typeKey: 'warrior',
                 name: 'Heltefar',
                 level: 1,
                 experience: 0,
-                isAlive: true
+                isAlive: true,
+                skills: [{
+                    typeKey: 'basic-attack',
+                    remainingCooldown: 0
+                }]
             }],
             arenas: []
         };

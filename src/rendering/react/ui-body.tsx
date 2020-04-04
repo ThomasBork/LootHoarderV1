@@ -1,7 +1,7 @@
 import React = require("react");
-import { Game } from "../../game/game";
 import { UITabButton } from "./shared/ui-tab-button";
 import { UIMapBody } from "./map/ui-map-body";
+import { UIHeroesBody } from "./heroes/ui-heroes-body";
 
 interface TabProps {
     key: string;
@@ -9,44 +9,44 @@ interface TabProps {
     imageUrl: string;
 }
 
-export class UIBody extends React.Component<{game: Game},{activeTabKey: string}> {
+export class UIBody extends React.Component<{},{activeTabKey: string}> {
     private tabs: TabProps[];
 
-    constructor(props: {game:Game}) {
+    constructor(props: {}) {
         super(props);
 
         this.tabs = [
             {
-                key: 'hero',
-                text: 'Hero',
+                key: 'heroes',
+                text: 'Heroes',
                 imageUrl: 'img/tabs/heroes.png'
             },
             {
                 key: 'combat',
                 text: 'Combat',
-                imageUrl: 'img/tabs/heroes.png'
+                imageUrl: 'img/tabs/combat.png'
             },
             {
                 key: 'map',
                 text: 'Map',
-                imageUrl: 'img/tabs/heroes.png'
+                imageUrl: 'img/tabs/map.png'
             },
             {
                 key: 'quests',
                 text: 'Quests',
-                imageUrl: 'img/tabs/heroes.png'
+                imageUrl: 'img/tabs/quests.png'
             },
         ]
 
-        this.state = {activeTabKey: "hero"};
+        this.state = {activeTabKey: "heroes"};
     }
     private selectTab(tabKey: string): void {
         this.setState ({activeTabKey: tabKey});
     }
     private renderCurrentTabBody(): JSX.Element {
         switch(this.state.activeTabKey) {
-            case 'hero':
-                return null;
+            case 'heroes':
+                return <UIHeroesBody></UIHeroesBody>;
             case 'combat':
                 return null;
             case 'map':

@@ -14,9 +14,11 @@ export class UIGame extends React.Component<{}, {game: Game}> {
     }
     newGame() {
         const gameController = new GameController();
+        GameServices.currentGameController = gameController;
         gameController.initialize();
 
         gameController.newGame();
+        GameServices.currentGame = gameController.game;
         
         this.setState({game: gameController.game});
     }
@@ -28,7 +30,7 @@ export class UIGame extends React.Component<{}, {game: Game}> {
                     this.state.game
                     ? 
                     <GameContext.Provider value={this.state.game}>
-                        <UIBody game={this.state.game}></UIBody>
+                        <UIBody></UIBody>
                     </GameContext.Provider>
                     : null
                 }

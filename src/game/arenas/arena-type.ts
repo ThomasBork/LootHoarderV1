@@ -7,5 +7,26 @@ export class ArenaType {
     public description: string;
     public imageName: string;
     public position: Vector2;
+    public level: number;
     public spawnRooms: (level: number) => ArenaRoom[];
+
+    public static create(options: {
+        key: string,
+        name: string,
+        description: string,
+        imageName: string,
+        position: Vector2,
+        level: number,
+        spawnRooms: (level: number) => ArenaRoom[]
+    }): ArenaType {
+        const arenaType = new ArenaType();
+        arenaType.key = options.key;
+        arenaType.name = options.name;
+        arenaType.description = options.description;
+        arenaType.imageName = options.imageName;
+        arenaType.position = options.position;
+        arenaType.level = options.level;
+        arenaType.spawnRooms = options.spawnRooms;
+        return arenaType;
+    }
 }

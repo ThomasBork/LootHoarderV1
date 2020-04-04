@@ -1,7 +1,8 @@
 import React = require("react");
 import { Vector2 } from "../../../common/vector2";
 
-export class UIDraggableContainer extends React.Component<{children: React.ReactNode}, {translate: Vector2, zoom: number}> {
+type Props = {className?: string, children: React.ReactNode};
+export class UIDraggableContainer extends React.Component<Props, {translate: Vector2, zoom: number}> {
     // Constants
     private minZoom = 0.2;
     private maxZoom = 2;
@@ -21,7 +22,7 @@ export class UIDraggableContainer extends React.Component<{children: React.React
     private documentKeyDownHandler: (event: KeyboardEvent) => void;
     private documentKeyUpHandler: (event: KeyboardEvent) => void;
 
-    constructor(props: {children: React.ReactNode}) {
+    constructor(props: Props) {
         super(props);
 
         this.state = {
@@ -160,10 +161,17 @@ export class UIDraggableContainer extends React.Component<{children: React.React
         document.removeEventListener("keydown", this.documentKeyDownHandler, false);
         document.removeEventListener("keyup", this.documentKeyUpHandler, false);
     }
+    public getClassName(): string {
+        if (this.props.className) {
+            return `draggable-container ${this.props.className}`;
+        } else {
+            return `draggable-container`;
+        }
+    }
     public render(): JSX.Element {
         return (
             <div 
-                className="draggable-container"
+                className={this.getClassName()}
                 onWheel={(event: React.WheelEvent<HTMLDivElement>) => this.onWheel(event)}
                 onMouseDown={(event: React.MouseEvent<HTMLDivElement>) => this.onMouseDown(event)}
                 onMouseUp={(event: React.MouseEvent<HTMLDivElement>) => this.onMouseUp(event)}

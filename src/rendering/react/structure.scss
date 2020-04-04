@@ -1,3 +1,5 @@
+@import "colors.scss";
+
 body {
     background-color: #141414;
     color: #f2f2f2;
@@ -36,19 +38,25 @@ body {
 
 .tabs {
     display: flex;
+    margin-bottom: 1px;
 
     .tab {
         display: flex;
         flex-direction: column;
         align-items: center;
         
-        border: 1px solid grey;
         padding: 15px;
         cursor: pointer;
         user-select: none;
 
+        background-color: $background-color;
+
         &.active {
-            border-color: white;
+            background-color: $dark-background-color;
+        }
+
+        &:hover:not(.active) {
+            background-color: $semi-dark-background-color;
         }
     }
 }
@@ -56,5 +64,4 @@ body {
 .tab-body {
     width: 1400px;;
     height: 800px;
-    border: 1px solid white;
 }

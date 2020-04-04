@@ -29,6 +29,18 @@
     cursor: pointer;
 }
 
+button {
+    padding: 10px;
+    background-color: #3333FF;
+    border: 1px solid black;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+        background-color: #6666FF;
+    }
+}
+
 .large-list-card {
     background-color: $brown;
     border: 2px solid $grey;

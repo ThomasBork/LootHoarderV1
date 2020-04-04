@@ -12,6 +12,7 @@ export class Game {
 
     public load(dbGame: DBGame): void {
         this.dbModel = dbGame;
+        const heroes = 
         this.heroes = this.dbModel.heroes.map(dbHero => {
             const hero = new Hero();
             hero.load(dbHero);
@@ -34,7 +35,7 @@ export class Game {
         this.heroes.push(hero);
     }
 
-    public spawnArena(type: ArenaType, level: number, heroes: Hero[]): void {
+    public spawnArena(type: ArenaType, level: number, heroes: Hero[]): Arena {
         const rooms = type.spawnRooms(level);
         const dbArena = <DBArena> {
             typeKey: type.key,
@@ -53,5 +54,7 @@ export class Game {
         this.arenas.push(arena);
 
         arena.rooms[0].setHeroes(heroes);
+
+        return arena;
     }
 }

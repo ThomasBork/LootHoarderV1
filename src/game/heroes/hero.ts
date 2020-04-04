@@ -1,11 +1,17 @@
 import { Attributes } from "../attributes/attributes";
 import { DBHero } from "../../game-state/db-hero";
 import { Observable, ObservableFactory } from "../../common/Observable";
+import { HeroType } from "./hero-type";
+import { GameServices } from "../game-services";
 
 export class Hero {
     public dbModel: DBHero;
+    public type: HeroType;
     public attributes: Attributes;
     public onDeath: Observable = ObservableFactory.create();
+
+    public get id(): number { return this.dbModel.id }
+    public get name(): string { return this.dbModel.name }
 
     public get currentHealth(): number {
         return this.dbModel.currentHealth;
@@ -24,5 +30,6 @@ export class Hero {
         if (this.dbModel.currentHealth === undefined) {
             this.dbModel.currentHealth = this.attributes.maximumHealth.value;
         }
+        this.type = GameServices.heroTypes.getByKey(this.dbModel.typeKey);
     }
 }

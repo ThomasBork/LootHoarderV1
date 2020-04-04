@@ -9,13 +9,14 @@ import { GameServices } from '../game-services';
 export class ArenaTypeService {
     public allArenaTypes: ArenaType[];
     public initialize (): void {
-        this.allArenaTypes = <ArenaType[]>[
-             {
+        this.allArenaTypes = [
+             ArenaType.create({
                 key: 'forest',
                 name: 'Forest',
                 description: 'Easy monsters!',
                 imageName: 'forest.png',
                 position: {x: 0, y: 0},
+                level: 1,
                 spawnRooms: (level: number) => {
                     return this.spawnRooms({
                         level: level,
@@ -33,13 +34,14 @@ export class ArenaTypeService {
                         ]
                     });
                 }
-            },
-            {
-                ke: 'brushlands',
+            }),
+            ArenaType.create({
+                key: 'brushlands',
                 name: 'Brushlands',
                 description: 'Also easy monsters!',
                 imageName: 'brushlands.png',
                 position: {x: 1, y: 0},
+                level: 5,
                 spawnRooms: (level: number) => {
                     return this.spawnRooms({
                         level: level,
@@ -57,7 +59,7 @@ export class ArenaTypeService {
                         ]
                     });
                 }
-            }
+            })
         ];
     }
 
