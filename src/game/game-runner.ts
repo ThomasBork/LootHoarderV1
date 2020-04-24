@@ -1,5 +1,5 @@
 import { Game } from "./Game";
-import { Observable, ObservableFactory } from "../common/Observable";
+import { Observable, ObservableFactory } from "../common/observable";
 
 export class GameRunner {
     private updateFrequency: number = 100;

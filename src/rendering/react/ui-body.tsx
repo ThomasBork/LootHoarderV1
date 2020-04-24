@@ -2,6 +2,7 @@ import React = require("react");
 import { UITabButton } from "./shared/ui-tab-button";
 import { UIMapBody } from "./map/ui-map-body";
 import { UIHeroesBody } from "./heroes/ui-heroes-body";
+import { UICombatBody } from "./combat/ui-combat-body";
 
 interface TabProps {
     key: string;
@@ -48,9 +49,9 @@ export class UIBody extends React.Component<{},{activeTabKey: string}> {
             case 'heroes':
                 return <UIHeroesBody></UIHeroesBody>;
             case 'combat':
-                return null;
+                return <UICombatBody selectedArena={null}></UICombatBody>;
             case 'map':
-                return <UIMapBody></UIMapBody>;
+                return <UIMapBody arenaStarted={(arena) => {this.selectTab('combat')}}></UIMapBody>;
             case 'quests':
                 return null;
             default: 

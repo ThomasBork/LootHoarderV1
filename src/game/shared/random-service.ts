@@ -13,7 +13,23 @@ export class RandomService {
         }
     }
 
+    public getRandomElement <T>(array: T[]): T {
+        const index = this.randomInteger(0, array.length - 1);
+        return array[index];
+    }
+
     public rollSuccess (successChance: number): boolean {
         return Math.random() < successChance;
+    }
+
+    public randomInteger (min: number, max: number): number {
+        const rolledValue = Math.random() * (max - min + 1) + min;
+        const roundedRolledValue = Math.floor(rolledValue);
+        return roundedRolledValue;
+    }
+
+    public randomDecimal (min: number, max: number): number {
+        const rolledValue = Math.random() * (max - min) + min;
+        return rolledValue;
     }
 }

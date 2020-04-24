@@ -1,5 +1,5 @@
-import { ArenaRoom } from "./arena-room";
 import { Vector2 } from "../../common/vector2";
+import { DBArenaRoom } from "../../game-state/db-arena-room";
 
 export class ArenaType {
     public key: string;
@@ -8,7 +8,7 @@ export class ArenaType {
     public imageName: string;
     public position: Vector2;
     public level: number;
-    public spawnRooms: (level: number) => ArenaRoom[];
+    public createDbRooms: (level: number) => DBArenaRoom[];
 
     public static create(options: {
         key: string,
@@ -17,7 +17,7 @@ export class ArenaType {
         imageName: string,
         position: Vector2,
         level: number,
-        spawnRooms: (level: number) => ArenaRoom[]
+        createDbRooms: (level: number) => DBArenaRoom[]
     }): ArenaType {
         const arenaType = new ArenaType();
         arenaType.key = options.key;
@@ -26,7 +26,7 @@ export class ArenaType {
         arenaType.imageName = options.imageName;
         arenaType.position = options.position;
         arenaType.level = options.level;
-        arenaType.spawnRooms = options.spawnRooms;
+        arenaType.createDbRooms = options.createDbRooms;
         return arenaType;
     }
 }

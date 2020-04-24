@@ -4,14 +4,16 @@ import { ArenaType } from "../../../game/arenas/arena-type";
 import { Vector2 } from "../../../common/vector2";
 import { UIDraggableContainer } from "../shared/ui-draggable-container";
 import { UIMapArenaTypeInformation } from "./ui-map-arena-type-information";
+import { Arena } from "../../../game/arenas/arena";
 
+type Props = {arenaStarted: (arena: Arena) => void};
 type State = {selectedArenaType: ArenaType};
-export class UIMapBody extends React.Component<{}, State> {
+export class UIMapBody extends React.Component<Props, State> {
     private arenaTypeWidth = 200;
     private arenaTypeHeight = 200;
     private arenaTypeMargin = 10;
 
-    constructor(props: {}) {
+    constructor(props: Props) {
         super(props);
 
         this.state = {
@@ -60,7 +62,7 @@ export class UIMapBody extends React.Component<{}, State> {
                         ? 
                             <UIMapArenaTypeInformation 
                                 arenaType={this.state.selectedArenaType}
-                                arenaStarted={() => {}}
+                                arenaStarted={(arena: Arena) => {this.props.arenaStarted(arena)}}
                             ></UIMapArenaTypeInformation>
                         : null
                     }

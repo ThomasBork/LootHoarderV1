@@ -1,4 +1,3 @@
-import { Observable, ObservableFactory } from "../common/Observable";
 import { DBGame } from "../game-state/db-game";
 import { Hero } from "./heroes/hero";
 import { ArenaType } from "./arenas/arena-type";
@@ -10,24 +9,16 @@ export class Game {
     public heroes: Hero[];
     public arenas: Arena[];
 
-    public load(dbGame: DBGame): void {
-        this.dbModel = dbGame;
-        const heroes = 
-        this.heroes = this.dbModel.heroes.map(dbHero => {
-            const hero = new Hero();
-            hero.load(dbHero);
-            return hero;
-        });
-
-        this.arenas = this.dbModel.arenas.map(dbArena => {
-            const arena = new Arena();
-            arena.load(dbArena);
-            return arena;
-        });
+    public static load(dbGame: DBGame): Game {
+        const game = new Game();
+        game.dbModel = dbGame;
+        game.heroes = dbGame.heroes.map(Hero.load);
+        game.arenas = dbGame.arenas.map(Arena.load);
+        return game;
     }
 
     public update (dTime: number): void {
-        //console.log("Game", this.dbModel);
+        this.arenas.forEach(arena => arena.update(dTime));
     }
 
     public addHero(hero: Hero): void {
@@ -36,19 +27,15 @@ export class Game {
     }
 
     public spawnArena(type: ArenaType, level: number, heroes: Hero[]): Arena {
-        const rooms = type.spawnRooms(level);
+        const dbRooms = type.createDbRooms(level);
         const dbArena = <DBArena> {
             typeKey: type.key,
             startTime: new Date(),
             level: level,
-            rooms: [],
+            rooms: dbRooms,
             currentRoomIndex: 0
         };
-        const arena = new Arena();
-        arena.load(dbArena);
-
-        arena.dbModel.rooms = rooms.map(room => room.dbModel);
-        arena.rooms = rooms;
+        const arena = Arena.load(dbArena);
 
         this.dbModel.arenas.push(arena.dbModel);
         this.arenas.push(arena);

@@ -149,14 +149,14 @@ export class UIDraggableContainer extends React.Component<Props, {translate: Vec
             }
         });
     }
-    public componentWillMount(): void {
+    public UNSAFE_componentWillMount(): void {
         this.documentKeyDownHandler = (event: KeyboardEvent) => {this.handleKeyDown(event.keyCode)}
         this.documentKeyUpHandler = (event: KeyboardEvent) => {this.handleKeyUp(event.keyCode)}
         this.updateIntervalID = setInterval(() => this.update(50), 50);
         document.addEventListener("keydown", this.documentKeyDownHandler, false);
         document.addEventListener("keyup", this.documentKeyUpHandler, false);
     }
-    public componentWillUnmount(): void {
+    public UNSAFE_componentWillUnmount(): void {
         clearInterval(this.updateIntervalID);
         document.removeEventListener("keydown", this.documentKeyDownHandler, false);
         document.removeEventListener("keyup", this.documentKeyUpHandler, false);

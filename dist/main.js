@@ -86,6 +86,24 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rendering/react/combat/combat.scss":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rendering/react/combat/combat.scss ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "#combat-body-container {\n  height: 100%;\n  width: 100%;\n  display: flex; }\n  #combat-body-container .arenas-container {\n    width: 300px;\n    background-color: #87583A;\n    border-right: 1px solid black; }\n  #combat-body-container .selected-arena-container {\n    flex: 1 1 auto; }\n    #combat-body-container .selected-arena-container .arena {\n      height: 100%;\n      width: 100%;\n      background-size: 100% 100%;\n      display: flex;\n      flex-direction: column;\n      position: relative; }\n      #combat-body-container .selected-arena-container .arena .header {\n        flex: 0 0 auto;\n        display: flex;\n        justify-content: space-between; }\n        #combat-body-container .selected-arena-container .arena .header .room-info {\n          display: flex;\n          flex-direction: column; }\n        #combat-body-container .selected-arena-container .arena .header .arena-info {\n          display: flex;\n          flex-direction: column; }\n      #combat-body-container .selected-arena-container .arena .body {\n        flex: 1 1 auto;\n        position: relative; }\n        #combat-body-container .selected-arena-container .arena .body .character-container {\n          position: absolute;\n          width: 200px;\n          border: 2px solid transparent; }\n          #combat-body-container .selected-arena-container .arena .body .character-container.selectable {\n            cursor: pointer; }\n          #combat-body-container .selected-arena-container .arena .body .character-container.selected:not(.legal-target) {\n            border-color: green; }\n          #combat-body-container .selected-arena-container .arena .body .character-container.legal-target {\n            cursor: pointer;\n            border-color: white;\n            border-style: dashed; }\n            #combat-body-container .selected-arena-container .arena .body .character-container.legal-target:hover {\n              border-style: solid; }\n          #combat-body-container .selected-arena-container .arena .body .character-container .character .character-image {\n            height: 200px;\n            width: 100%;\n            background-size: 100% 100%; }\n      #combat-body-container .selected-arena-container .arena .footer {\n        flex: 0 0 auto;\n        padding: 20px; }\n        #combat-body-container .selected-arena-container .arena .footer .skills-container {\n          display: flex;\n          padding: 15px;\n          background-color: #87583A; }\n          #combat-body-container .selected-arena-container .arena .footer .skills-container .skill-container {\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            padding: 10px;\n            margin-right: 15px;\n            background-color: #B77C57;\n            cursor: pointer; }\n            #combat-body-container .selected-arena-container .arena .footer .skills-container .skill-container .skill-image {\n              height: 64px;\n              width: 64px;\n              background-size: 100% 100%; }\n      #combat-body-container .selected-arena-container .arena .overlay {\n        position: absolute;\n        left: 5%;\n        top: 5%;\n        width: 90%;\n        height: 90%;\n        opacity: 0.7;\n        background-color: black;\n        z-index: 1000;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: space-around; }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rendering/react/general.scss":
 /*!***********************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rendering/react/general.scss ***!
@@ -97,7 +115,25 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".flexbox {\n  display: flex; }\n\n.flexbox-between {\n  display: flex;\n  justify-content: space-between; }\n\n.flexbox-column {\n  display: flex;\n  flex-direction: column; }\n\n.flexbox-column-between {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between; }\n\n.button {\n  background-color: #9999BB;\n  border: 2px solid grey;\n  display: inline-block;\n  padding-left: 15px;\n  padding-right: 15px;\n  cursor: pointer; }\n\nbutton {\n  padding: 10px;\n  background-color: #3333FF;\n  border: 1px solid black;\n  cursor: pointer;\n  color: white; }\n  button:hover {\n    background-color: #6666FF; }\n\n.large-list-card {\n  background-color: #BB9955;\n  border: 2px solid grey;\n  min-height: 150px;\n  width: 600px;\n  margin-bottom: 5px; }\n\n.progress-bar {\n  width: 100%;\n  height: 10px;\n  background-color: #141414;\n  border: 1px solid grey; }\n\n.progress-bar .bar {\n  height: 100%;\n  background-color: #9999BB;\n  display: block; }\n\n.draggable-container {\n  overflow: hidden;\n  width: 100%;\n  height: 100%; }\n", ""]);
+exports.push([module.i, ".flexbox {\n  display: flex; }\n\n.flexbox-between {\n  display: flex;\n  justify-content: space-between; }\n\n.flexbox-column {\n  display: flex;\n  flex-direction: column; }\n\n.flexbox-column-between {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between; }\n\n.button {\n  background-color: #9999BB;\n  border: 2px solid grey;\n  display: inline-block;\n  padding-left: 15px;\n  padding-right: 15px;\n  cursor: pointer; }\n\nbutton {\n  padding: 10px;\n  background-color: #3333FF;\n  border: 1px solid black;\n  cursor: pointer;\n  color: white; }\n  button:hover {\n    background-color: #6666FF; }\n  button:active {\n    margin-top: 1px;\n    margin-left: 1px; }\n\n.large-list-card {\n  background-color: #BB9955;\n  border: 2px solid grey;\n  min-height: 150px;\n  width: 600px;\n  margin-bottom: 5px; }\n\n.progress-bar {\n  width: 100%;\n  height: 10px;\n  background-color: #141414;\n  border: 1px solid grey; }\n\n.progress-bar .bar {\n  height: 100%;\n  background-color: #9999BB; }\n\n.draggable-container {\n  overflow: hidden;\n  width: 100%;\n  height: 100%; }\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rendering/react/heroes/heroes.scss":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rendering/react/heroes/heroes.scss ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "", ""]);
 // Exports
 module.exports = exports;
 
@@ -525,9 +561,94 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ "./src/common/Observable.ts":
+/***/ "./src/common/number-formatting-service.ts":
+/*!*************************************************!*\
+  !*** ./src/common/number-formatting-service.ts ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+class NumberFormattingService {
+    constructor() {
+        this.postfixes = ['', 'k', 'm', 'b'];
+    }
+    formatInteger(n) {
+        return this.format(n, 0);
+    }
+    formatDecimal(n) {
+        return this.format(n, 2);
+    }
+    format(number, maxDecimals, minDecimals, ceil) {
+        if (maxDecimals === undefined) {
+            maxDecimals = 2;
+        }
+        if (minDecimals === undefined) {
+            minDecimals = maxDecimals;
+        }
+        if (ceil === undefined) {
+            ceil = false;
+        }
+        let amountOfTimesTheNumberCanBeDividedBy1000 = 0;
+        while (number > 10000) {
+            number /= 1000;
+            amountOfTimesTheNumberCanBeDividedBy1000++;
+        }
+        const multiplier = Math.pow(10, maxDecimals);
+        let roundedNumber;
+        if (ceil) {
+            number -= 0.0001; // Floating point fix.
+            roundedNumber = Math.ceil(number * multiplier) / multiplier;
+        }
+        else {
+            number += 0.0001; // Floating point fix.
+            roundedNumber = Math.floor(number * multiplier) / multiplier;
+        }
+        let numberString;
+        if (minDecimals) {
+            numberString = roundedNumber.toFixed(minDecimals);
+        }
+        else {
+            numberString = roundedNumber.toString();
+        }
+        const postfix = this.postfixes[amountOfTimesTheNumberCanBeDividedBy1000];
+        if (postfix) {
+            numberString += postfix;
+        }
+        return numberString;
+    }
+}
+exports.NumberFormattingService = NumberFormattingService;
+
+
+/***/ }),
+
+/***/ "./src/common/observable-subscription.ts":
+/*!***********************************************!*\
+  !*** ./src/common/observable-subscription.ts ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+class ObservableSubscription {
+    constructor(observer, callback) {
+        this.observer = observer;
+        this.callback = callback;
+    }
+}
+exports.ObservableSubscription = ObservableSubscription;
+
+
+/***/ }),
+
+/***/ "./src/common/observable.ts":
 /*!**********************************!*\
-  !*** ./src/common/Observable.ts ***!
+  !*** ./src/common/observable.ts ***!
   \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -565,27 +686,6 @@ exports.ObservableFactory = ObservableFactory;
 
 /***/ }),
 
-/***/ "./src/common/observable-subscription.ts":
-/*!***********************************************!*\
-  !*** ./src/common/observable-subscription.ts ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-class ObservableSubscription {
-    constructor(observer, callback) {
-        this.observer = observer;
-        this.callback = callback;
-    }
-}
-exports.ObservableSubscription = ObservableSubscription;
-
-
-/***/ }),
-
 /***/ "./src/game/Game.ts":
 /*!**************************!*\
   !*** ./src/game/Game.ts ***!
@@ -599,39 +699,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const hero_1 = __webpack_require__(/*! ./heroes/hero */ "./src/game/heroes/hero.ts");
 const arena_1 = __webpack_require__(/*! ./arenas/arena */ "./src/game/arenas/arena.ts");
 class Game {
-    load(dbGame) {
-        this.dbModel = dbGame;
-        const heroes = this.heroes = this.dbModel.heroes.map(dbHero => {
-            const hero = new hero_1.Hero();
-            hero.load(dbHero);
-            return hero;
-        });
-        this.arenas = this.dbModel.arenas.map(dbArena => {
-            const arena = new arena_1.Arena();
-            arena.load(dbArena);
-            return arena;
-        });
+    static load(dbGame) {
+        const game = new Game();
+        game.dbModel = dbGame;
+        game.heroes = dbGame.heroes.map(hero_1.Hero.load);
+        game.arenas = dbGame.arenas.map(arena_1.Arena.load);
+        return game;
     }
     update(dTime) {
-        //console.log("Game", this.dbModel);
+        this.arenas.forEach(arena => arena.update(dTime));
     }
     addHero(hero) {
         this.dbModel.heroes.push(hero.dbModel);
         this.heroes.push(hero);
     }
     spawnArena(type, level, heroes) {
-        const rooms = type.spawnRooms(level);
+        const dbRooms = type.createDbRooms(level);
         const dbArena = {
             typeKey: type.key,
             startTime: new Date(),
             level: level,
-            rooms: [],
+            rooms: dbRooms,
             currentRoomIndex: 0
         };
-        const arena = new arena_1.Arena();
-        arena.load(dbArena);
-        arena.dbModel.rooms = rooms.map(room => room.dbModel);
-        arena.rooms = rooms;
+        const arena = arena_1.Arena.load(dbArena);
         this.dbModel.arenas.push(arena.dbModel);
         this.arenas.push(arena);
         arena.rooms[0].setHeroes(heroes);
@@ -639,6 +730,30 @@ class Game {
     }
 }
 exports.Game = Game;
+
+
+/***/ }),
+
+/***/ "./src/game/arenas/arena-room-encounter.ts":
+/*!*************************************************!*\
+  !*** ./src/game/arenas/arena-room-encounter.ts ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const monster_1 = __webpack_require__(/*! ../monsters/monster */ "./src/game/monsters/monster.ts");
+class ArenaRoomEncounter {
+    static load(dbArenaRoomEncounter) {
+        const arenaRoomEncounter = new ArenaRoomEncounter();
+        arenaRoomEncounter.dbModel = dbArenaRoomEncounter;
+        arenaRoomEncounter.monsters = arenaRoomEncounter.dbModel.monsters.map(monster_1.Monster.load);
+        return arenaRoomEncounter;
+    }
+}
+exports.ArenaRoomEncounter = ArenaRoomEncounter;
 
 
 /***/ }),
@@ -653,18 +768,18 @@ exports.Game = Game;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const monster_1 = __webpack_require__(/*! ../monsters/monster */ "./src/game/monsters/monster.ts");
+const arena_room_encounter_1 = __webpack_require__(/*! ./arena-room-encounter */ "./src/game/arenas/arena-room-encounter.ts");
 class ArenaRoom {
-    get currentMonster() {
-        return this.monsters[this.dbModel.currentMonsterIndex];
+    get currentEncounter() {
+        return this.encounters[this.dbModel.currentEncounterIndex];
     }
-    load(dbArenaRoom) {
-        this.dbModel = dbArenaRoom;
-        this.monsters = this.dbModel.monsters.map(dbMonster => {
-            const monster = new monster_1.Monster();
-            monster.load(dbMonster);
-            return monster;
-        });
+    get currentEncounterIndex() { return this.dbModel.currentEncounterIndex; }
+    get hasPlayerLost() { return this.heroes.every(hero => !hero.isAlive); }
+    static load(dbArenaRoom) {
+        const arenaRoom = new ArenaRoom();
+        arenaRoom.dbModel = dbArenaRoom;
+        arenaRoom.encounters = arenaRoom.dbModel.encounters.map(arena_room_encounter_1.ArenaRoomEncounter.load);
+        return arenaRoom;
     }
     setHeroes(heroes) {
         this.heroes = heroes;
@@ -687,7 +802,6 @@ exports.ArenaRoom = ArenaRoom;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const arena_type_1 = __webpack_require__(/*! ./arena-type */ "./src/game/arenas/arena-type.ts");
-const arena_room_1 = __webpack_require__(/*! ./arena-room */ "./src/game/arenas/arena-room.ts");
 const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
 class ArenaTypeService {
     initialize() {
@@ -699,11 +813,12 @@ class ArenaTypeService {
                 imageName: 'forest.png',
                 position: { x: 0, y: 0 },
                 level: 1,
-                spawnRooms: (level) => {
-                    return this.spawnRooms({
+                createDbRooms: (level) => {
+                    return this.createDbRooms({
                         level: level,
                         amountOfRooms: 10,
-                        amountOfMonstersInEachRoom: 5,
+                        amountOfEncountersInEachRoom: 5,
+                        amountOfMonstersInEachEncounter: 2,
                         monsterTypes: [
                             {
                                 weight: 20,
@@ -724,11 +839,12 @@ class ArenaTypeService {
                 imageName: 'brushlands.png',
                 position: { x: 1, y: 0 },
                 level: 5,
-                spawnRooms: (level) => {
-                    return this.spawnRooms({
+                createDbRooms: (level) => {
+                    return this.createDbRooms({
                         level: level,
                         amountOfRooms: 10,
-                        amountOfMonstersInEachRoom: 5,
+                        amountOfEncountersInEachRoom: 5,
+                        amountOfMonstersInEachEncounter: 2,
                         monsterTypes: [
                             {
                                 weight: 20,
@@ -747,25 +863,30 @@ class ArenaTypeService {
     getByKey(key) {
         return this.allArenaTypes.find(type => type.key === key);
     }
-    spawnRooms(settings) {
-        const arenaRooms = [];
+    createDbRooms(settings) {
+        const dbArenaRooms = [];
         for (let currentRoomIndex = 0; currentRoomIndex < settings.amountOfRooms; currentRoomIndex++) {
-            const dbMonsters = [];
-            for (let currentMonsterIndex = 0; currentMonsterIndex < settings.amountOfMonstersInEachRoom; currentMonsterIndex++) {
-                const monsterType = game_services_1.GameServices.random.getWeightedValue(settings.monsterTypes);
-                const dbMonster = game_services_1.GameServices.monsters.createDBMonster(settings.level, monsterType);
-                dbMonsters.push(dbMonster);
+            const dbEncounters = [];
+            for (let currentEncounterIndex = 0; currentEncounterIndex < settings.amountOfEncountersInEachRoom; currentEncounterIndex++) {
+                const dbMonsters = [];
+                for (let currentMonsterIndex = 0; currentMonsterIndex < settings.amountOfMonstersInEachEncounter; currentMonsterIndex++) {
+                    const monsterType = game_services_1.GameServices.random.getWeightedValue(settings.monsterTypes);
+                    const dbMonster = game_services_1.GameServices.monsters.createDBMonster(settings.level, monsterType);
+                    dbMonsters.push(dbMonster);
+                }
+                const dbEncounter = {
+                    monsters: dbMonsters
+                };
+                dbEncounters.push(dbEncounter);
             }
             const dbArenaRoom = {
-                currentMonsterIndex: 0,
+                currentEncounterIndex: 0,
                 heroIds: [],
-                monsters: dbMonsters
+                encounters: dbEncounters
             };
-            const arenaRoom = new arena_room_1.ArenaRoom();
-            arenaRoom.load(dbArenaRoom);
-            arenaRooms.push(arenaRoom);
+            dbArenaRooms.push(dbArenaRoom);
         }
-        return arenaRooms;
+        return dbArenaRooms;
     }
 }
 exports.ArenaTypeService = ArenaTypeService;
@@ -792,7 +913,7 @@ class ArenaType {
         arenaType.imageName = options.imageName;
         arenaType.position = options.position;
         arenaType.level = options.level;
-        arenaType.spawnRooms = options.spawnRooms;
+        arenaType.createDbRooms = options.createDbRooms;
         return arenaType;
     }
 }
@@ -813,15 +934,86 @@ exports.ArenaType = ArenaType;
 Object.defineProperty(exports, "__esModule", { value: true });
 const arena_room_1 = __webpack_require__(/*! ./arena-room */ "./src/game/arenas/arena-room.ts");
 const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+const hero_1 = __webpack_require__(/*! ../heroes/hero */ "./src/game/heroes/hero.ts");
+const observable_1 = __webpack_require__(/*! ../../common/observable */ "./src/common/observable.ts");
 class Arena {
-    load(dbArena) {
-        this.dbModel = dbArena;
-        this.type = game_services_1.GameServices.arenaTypes.getByKey(dbArena.typeKey);
-        this.rooms = dbArena.rooms.map(dbRoom => {
-            const room = new arena_room_1.ArenaRoom();
-            room.load(dbRoom);
-            return room;
-        });
+    constructor() {
+        this.onPlayerLose = observable_1.ObservableFactory.create();
+    }
+    get currentRoom() { return this.rooms[this.dbModel.currentRoomIndex]; }
+    get currentRoomIndex() { return this.dbModel.currentRoomIndex; }
+    get level() { return this.dbModel.level; }
+    get hasPlayerLost() { return this.currentRoom.hasPlayerLost; }
+    static load(dbArena) {
+        const arena = new Arena();
+        arena.dbModel = dbArena;
+        arena.type = game_services_1.GameServices.arenaTypes.getByKey(dbArena.typeKey);
+        arena.rooms = dbArena.rooms.map(arena_room_1.ArenaRoom.load);
+        return arena;
+    }
+    update(dTime) {
+        if (!this.hasPlayerLost) {
+            this.currentRoom.heroes.forEach(hero => {
+                hero.skills.forEach(skill => skill.reduceCooldown(dTime));
+            });
+            this.currentRoom.currentEncounter.monsters.forEach(monster => {
+                if (monster.isAlive && !this.hasPlayerLost) {
+                    // Update cooldowns
+                    monster.skills.forEach(skill => skill.reduceCooldown(dTime));
+                    // Find and use a ready skill if possible
+                    const readySkills = monster.skills.filter(skill => skill.isReady);
+                    if (readySkills.length > 0) {
+                        const weightedReadySkills = readySkills.map(skill => {
+                            const weightedSkillType = monster.type.skillTypes.find(wSkillType => wSkillType.value === skill.type);
+                            return {
+                                weight: weightedSkillType.weight,
+                                value: skill
+                            };
+                        });
+                        const skillToUse = game_services_1.GameServices.random.getWeightedValue(weightedReadySkills);
+                        const legalTargets = this.getLegalTargets(monster, skillToUse.type);
+                        if (skillToUse.type.requiresTarget) {
+                            if (legalTargets.length > 0) {
+                                const target = game_services_1.GameServices.random.getRandomElement(legalTargets);
+                                this.useSkill(monster, target, skillToUse);
+                            }
+                        }
+                        else {
+                            this.useSkill(monster, null, skillToUse);
+                        }
+                    }
+                }
+            });
+        }
+    }
+    getLegalTargets(user, skillType) {
+        const legalTargets = [];
+        const isHero = user instanceof hero_1.Hero;
+        const heroes = this.currentRoom.heroes.filter(hero => hero.isAlive);
+        const monsters = this.currentRoom.currentEncounter.monsters.filter(monster => monster.isAlive);
+        const friends = isHero ? heroes : monsters;
+        const enemies = isHero ? monsters : heroes;
+        if (skillType.canTargetEnemy) {
+            legalTargets.push(...enemies);
+        }
+        if (skillType.canTargetFriend) {
+            legalTargets.push(...friends);
+        }
+        return legalTargets;
+    }
+    useSkill(user, target, skill) {
+        if (skill.remainingCooldown === 0) {
+            if (!this.hasPlayerLost) {
+                skill.type.effect(user, target, this.currentRoom);
+                skill.resetCooldown();
+                if (this.hasPlayerLost) {
+                    this.onPlayerLose.notify();
+                }
+            }
+        }
+        else {
+            throw new Error("Can't use " + skill.type.name + " because it is not ready.");
+        }
     }
 }
 exports.Arena = Arena;
@@ -973,6 +1165,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Game_1 = __webpack_require__(/*! ./Game */ "./src/game/Game.ts");
 const game_runner_1 = __webpack_require__(/*! ./game-runner */ "./src/game/game-runner.ts");
 const game_services_1 = __webpack_require__(/*! ./game-services */ "./src/game/game-services.ts");
+const item_body_location_1 = __webpack_require__(/*! ./items/item-body-location */ "./src/game/items/item-body-location.ts");
 class GameController {
     initialize() {
         this.gameRunner = new game_runner_1.GameRunner();
@@ -982,23 +1175,37 @@ class GameController {
             version: game_services_1.GameServices.version.currentVersion,
             startTime: new Date(),
             heroes: [{
-                    id: 0,
+                    id: 1,
                     typeKey: 'warrior',
                     name: 'Heltefar',
                     level: 1,
                     experience: 0,
+                    currentHealth: undefined,
                     isAlive: true,
                     skills: [{
                             typeKey: 'basic-attack',
                             remainingCooldown: 0
+                        }],
+                    items: [{
+                            key: item_body_location_1.ItemBodyLocation.mainHand,
+                            value: {
+                                id: 0,
+                                typeKey: 'broad-sword',
+                                level: 1,
+                                implicitPassiveAbilities: [{
+                                        typeKey: 'increased-attack-damage',
+                                        args: {
+                                            'attack-damage': 4
+                                        }
+                                    }],
+                                explicitPassiveAbilities: []
+                            }
                         }]
                 }],
-            arenas: []
+            arenas: [],
+            items: []
         };
-        this.game = new Game_1.Game();
-        this.game.load(dbGame);
-        const arenaType = game_services_1.GameServices.arenaTypes.allArenaTypes[0];
-        this.game.spawnArena(arenaType, 1, [this.game.heroes[0]]);
+        this.game = Game_1.Game.load(dbGame);
         this.gameRunner.beginUpdating(this.game);
     }
 }
@@ -1017,13 +1224,13 @@ exports.GameController = GameController;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const Observable_1 = __webpack_require__(/*! ../common/Observable */ "./src/common/Observable.ts");
+const observable_1 = __webpack_require__(/*! ../common/observable */ "./src/common/observable.ts");
 class GameRunner {
     constructor() {
         this.updateFrequency = 100;
         this.maxTimeToResumePerUpdate = 24 * 60 * 60 * 1000;
         this.lastUpdateAsNumber = Date.now();
-        this.onUpdate = Observable_1.ObservableFactory.create();
+        this.onUpdate = observable_1.ObservableFactory.create();
     }
     beginUpdating(game) {
         this.game = game;
@@ -1073,10 +1280,16 @@ const monster_type_service_1 = __webpack_require__(/*! ./monsters/monster-type-s
 const monster_service_1 = __webpack_require__(/*! ./monsters/monster-service */ "./src/game/monsters/monster-service.ts");
 const arena_type_service_1 = __webpack_require__(/*! ./arenas/arena-type-service */ "./src/game/arenas/arena-type-service.ts");
 const hero_type_service_1 = __webpack_require__(/*! ./heroes/hero-type-service */ "./src/game/heroes/hero-type-service.ts");
+const number_formatting_service_1 = __webpack_require__(/*! ../common/number-formatting-service */ "./src/common/number-formatting-service.ts");
+const passive_ability_type_service_1 = __webpack_require__(/*! ./items/passive-ability-type-service */ "./src/game/items/passive-ability-type-service.ts");
+const passive_ability_generator_service_1 = __webpack_require__(/*! ./items/passive-ability-generator-service */ "./src/game/items/passive-ability-generator-service.ts");
+const item_type_service_1 = __webpack_require__(/*! ./items/item-type-service */ "./src/game/items/item-type-service.ts");
 class GameServices {
     constructor() { }
     ;
     static initialize() {
+        GameServices.random = new random_service_1.RandomService();
+        GameServices.numberFormatting = new number_formatting_service_1.NumberFormattingService();
         GameServices.arenaTypes = new arena_type_service_1.ArenaTypeService();
         GameServices.arenaTypes.initialize();
         GameServices.attributeTypes = new attribute_type_service_1.AttributeTypeService();
@@ -1088,7 +1301,12 @@ class GameServices {
         GameServices.monsterTypes = new monster_type_service_1.MonsterTypeService();
         GameServices.monsterTypes.initialize();
         GameServices.monsters = new monster_service_1.MonsterService();
-        GameServices.random = new random_service_1.RandomService();
+        GameServices.passiveAbilityTypes = new passive_ability_type_service_1.PassiveAbilityTypeService();
+        GameServices.passiveAbilityTypes.initialize();
+        GameServices.passiveAbilityGenerators = new passive_ability_generator_service_1.PassiveAbilityGeneratorService();
+        GameServices.passiveAbilityGenerators.initialize();
+        GameServices.itemTypes = new item_type_service_1.ItemTypeService();
+        GameServices.itemTypes.initialize();
         GameServices.version = new version_service_1.VersionService();
     }
 }
@@ -1108,13 +1326,23 @@ exports.GameServices = GameServices;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const hero_type_1 = __webpack_require__(/*! ./hero-type */ "./src/game/heroes/hero-type.ts");
+const attributes_1 = __webpack_require__(/*! ../attributes/attributes */ "./src/game/attributes/attributes.ts");
 class HeroTypeService {
     initialize() {
         this.warrior = hero_type_1.HeroType.create({
             key: 'warrior',
             name: 'Warrior',
             description: 'Fights with brute force and no hesitation',
-            imageName: 'warrior.png'
+            imageName: 'warrior.png',
+            attributesBase: attributes_1.Attributes.create({
+                attackDamage: 16,
+                attackSpeed: 0.8,
+                maximumHealth: 50
+            }),
+            attributesPerLevel: attributes_1.Attributes.create({
+                attackDamage: 2,
+                maximumHealth: 50
+            })
         });
         this.allHeroTypes = [
             this.warrior
@@ -1146,6 +1374,8 @@ class HeroType {
         heroType.name = options.name;
         heroType.description = options.description;
         heroType.imageName = options.imageName;
+        heroType.attributesBase = options.attributesBase;
+        heroType.attributesPerLevel = options.attributesPerLevel;
         return heroType;
     }
 }
@@ -1165,14 +1395,20 @@ exports.HeroType = HeroType;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const attributes_1 = __webpack_require__(/*! ../attributes/attributes */ "./src/game/attributes/attributes.ts");
-const Observable_1 = __webpack_require__(/*! ../../common/Observable */ "./src/common/Observable.ts");
+const observable_1 = __webpack_require__(/*! ../../common/observable */ "./src/common/observable.ts");
 const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+const skill_1 = __webpack_require__(/*! ../skills/skill */ "./src/game/skills/skill.ts");
+const item_1 = __webpack_require__(/*! ../items/item */ "./src/game/items/item.ts");
 class Hero {
     constructor() {
-        this.onDeath = Observable_1.ObservableFactory.create();
+        this.onDeath = observable_1.ObservableFactory.create();
+        this.onDamageTaken = observable_1.ObservableFactory.createWith1Argument();
+        this.onLevelUp = observable_1.ObservableFactory.createWith1Argument();
     }
     get id() { return this.dbModel.id; }
     get name() { return this.dbModel.name; }
+    get level() { return this.dbModel.level; }
+    get isAlive() { return this.dbModel.isAlive; }
     get currentHealth() {
         return this.dbModel.currentHealth;
     }
@@ -1183,16 +1419,434 @@ class Hero {
             this.onDeath.notify();
         }
     }
-    load(dbHero) {
-        this.dbModel = dbHero;
-        this.attributes = attributes_1.Attributes.create();
-        if (this.dbModel.currentHealth === undefined) {
-            this.dbModel.currentHealth = this.attributes.maximumHealth.value;
+    static load(dbHero) {
+        const hero = new Hero();
+        hero.dbModel = dbHero;
+        hero.type = game_services_1.GameServices.heroTypes.getByKey(hero.dbModel.typeKey);
+        hero.attributes = attributes_1.Attributes.create();
+        hero.type.attributesBase.all.forEach(baseAttribute => hero.attributes.get(baseAttribute.type).amount.setAdditiveValueContainer(baseAttribute.amount));
+        hero.attributesFromLevel = attributes_1.Attributes.create();
+        hero.type.attributesPerLevel.all.forEach(perLevelAttribute => {
+            const attributeFromLevelValueContainer = hero.attributesFromLevel.get(perLevelAttribute.type).amount;
+            attributeFromLevelValueContainer.setAdditiveValueContainer(perLevelAttribute.amount);
+            attributeFromLevelValueContainer.setMultiplicativeModifier(hero, hero.dbModel.level);
+            hero.onLevelUp.addSubscription(hero, level => attributeFromLevelValueContainer.setMultiplicativeModifier(hero, hero.dbModel.level));
+            hero.attributes.get(perLevelAttribute.type).amount.setAdditiveValueContainer(attributeFromLevelValueContainer);
+        });
+        hero.skills = hero.dbModel.skills.map(skill_1.Skill.load);
+        hero.skills.forEach(skill => skill.type.setUpValueContainers(hero, skill));
+        hero.items = hero.dbModel.items.map(kvp => {
+            return {
+                key: kvp.key,
+                value: item_1.Item.load(kvp.value)
+            };
+        });
+        hero.items.forEach(kvp => kvp.value.implicitPassiveAbilities.forEach(passiveAbility => passiveAbility.type.applyEffect(passiveAbility, hero)));
+        if (dbHero.currentHealth === undefined) {
+            dbHero.currentHealth = hero.attributes.maximumHealth.value;
         }
-        this.type = game_services_1.GameServices.heroTypes.getByKey(this.dbModel.typeKey);
+        return hero;
+    }
+    incrementLevel() {
+        this.dbModel.level++;
+        this.onLevelUp.notify(this.dbModel.level);
+    }
+    takeDamage(amount, type) {
+        this.currentHealth -= amount;
+        if (this.currentHealth <= 0) {
+            this.currentHealth = 0;
+            this.dbModel.isAlive = false;
+        }
+        this.onDamageTaken.notify({
+            amount: amount,
+            type: type
+        });
     }
 }
 exports.Hero = Hero;
+
+
+/***/ }),
+
+/***/ "./src/game/items/item-body-location.ts":
+/*!**********************************************!*\
+  !*** ./src/game/items/item-body-location.ts ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var ItemBodyLocation;
+(function (ItemBodyLocation) {
+    ItemBodyLocation["mainHand"] = "main-hand";
+    ItemBodyLocation["offHand"] = "off-hand";
+    ItemBodyLocation["head"] = "head";
+    ItemBodyLocation["chest"] = "chest";
+    ItemBodyLocation["legs"] = "legs";
+    ItemBodyLocation["leftFoot"] = "left-foot";
+    ItemBodyLocation["rightFoot"] = "right-foot";
+})(ItemBodyLocation = exports.ItemBodyLocation || (exports.ItemBodyLocation = {}));
+
+
+/***/ }),
+
+/***/ "./src/game/items/item-category.ts":
+/*!*****************************************!*\
+  !*** ./src/game/items/item-category.ts ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var ItemCategory;
+(function (ItemCategory) {
+    ItemCategory[ItemCategory["weapon"] = 0] = "weapon";
+    ItemCategory[ItemCategory["shield"] = 1] = "shield";
+    ItemCategory[ItemCategory["head"] = 2] = "head";
+    ItemCategory[ItemCategory["chest"] = 3] = "chest";
+    ItemCategory[ItemCategory["legs"] = 4] = "legs";
+    ItemCategory[ItemCategory["foot"] = 5] = "foot";
+})(ItemCategory = exports.ItemCategory || (exports.ItemCategory = {}));
+
+
+/***/ }),
+
+/***/ "./src/game/items/item-type-service.ts":
+/*!*********************************************!*\
+  !*** ./src/game/items/item-type-service.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const item_type_1 = __webpack_require__(/*! ./item-type */ "./src/game/items/item-type.ts");
+const item_category_1 = __webpack_require__(/*! ./item-category */ "./src/game/items/item-category.ts");
+const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+class ItemTypeService {
+    initialize() {
+        this.broadSword = item_type_1.ItemType.create({
+            key: 'broad-sword',
+            imageName: 'broad-sword.png',
+            name: 'Broad Sword',
+            category: item_category_1.ItemCategory.weapon,
+            implicitPassiveAbilityGenerators: [game_services_1.GameServices.passiveAbilityGenerators.increasedAttackDamage],
+            possibleExplicitPassiveAbilityGenerators: [
+                { weight: 500, value: game_services_1.GameServices.passiveAbilityGenerators.increasedArmor },
+                { weight: 500, value: game_services_1.GameServices.passiveAbilityGenerators.increasedAttackDamage }
+            ]
+        });
+        this.towerShield = item_type_1.ItemType.create({
+            key: 'tower-shield',
+            imageName: 'tower-shield.png',
+            name: 'Tower Shield',
+            category: item_category_1.ItemCategory.shield,
+            implicitPassiveAbilityGenerators: [game_services_1.GameServices.passiveAbilityGenerators.increasedArmor],
+            possibleExplicitPassiveAbilityGenerators: [
+                { weight: 500, value: game_services_1.GameServices.passiveAbilityGenerators.increasedArmor },
+                { weight: 500, value: game_services_1.GameServices.passiveAbilityGenerators.increasedAttackDamage }
+            ]
+        });
+        this.wizardsHat = item_type_1.ItemType.create({
+            key: 'wizards-hat',
+            imageName: 'wizards-hat.png',
+            name: "Wizard's Hat",
+            category: item_category_1.ItemCategory.head,
+            implicitPassiveAbilityGenerators: [game_services_1.GameServices.passiveAbilityGenerators.increasedAttackDamage],
+            possibleExplicitPassiveAbilityGenerators: [
+                { weight: 500, value: game_services_1.GameServices.passiveAbilityGenerators.increasedAttackDamage }
+            ]
+        });
+        this.allItemTypes = [
+            this.broadSword,
+            this.towerShield,
+            this.wizardsHat
+        ];
+    }
+    getByKey(key) {
+        return this.allItemTypes.find(type => type.key === key);
+    }
+}
+exports.ItemTypeService = ItemTypeService;
+
+
+/***/ }),
+
+/***/ "./src/game/items/item-type.ts":
+/*!*************************************!*\
+  !*** ./src/game/items/item-type.ts ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+class ItemType {
+    static create(options) {
+        const itemType = new ItemType();
+        itemType.key = options.key;
+        itemType.name = options.name;
+        itemType.imageName = options.imageName;
+        itemType.category = options.category;
+        itemType.implicitPassiveAbilityGenerators = options.implicitPassiveAbilityGenerators;
+        itemType.possibleExplicitPassiveAbilityGenerators = options.possibleExplicitPassiveAbilityGenerators;
+        return itemType;
+    }
+}
+exports.ItemType = ItemType;
+
+
+/***/ }),
+
+/***/ "./src/game/items/item.ts":
+/*!********************************!*\
+  !*** ./src/game/items/item.ts ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const passive_ability_1 = __webpack_require__(/*! ./passive-ability */ "./src/game/items/passive-ability.ts");
+const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+class Item {
+    get level() { return this.dbModel.level; }
+    static load(dbModel) {
+        const newItem = new Item();
+        newItem.dbModel = dbModel;
+        newItem.type = game_services_1.GameServices.itemTypes.getByKey(dbModel.typeKey);
+        newItem.implicitPassiveAbilities = dbModel.implicitPassiveAbilities.map(passive_ability_1.PassiveAbility.load);
+        newItem.explicitPassiveAbilities = dbModel.explicitPassiveAbilities.map(passive_ability_1.PassiveAbility.load);
+        return newItem;
+    }
+}
+exports.Item = Item;
+
+
+/***/ }),
+
+/***/ "./src/game/items/passive-ability-argument-type.ts":
+/*!*********************************************************!*\
+  !*** ./src/game/items/passive-ability-argument-type.ts ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var PassiveAbilityArgumentType;
+(function (PassiveAbilityArgumentType) {
+    PassiveAbilityArgumentType[PassiveAbilityArgumentType["integer"] = 0] = "integer";
+    PassiveAbilityArgumentType[PassiveAbilityArgumentType["decimal"] = 1] = "decimal";
+    PassiveAbilityArgumentType[PassiveAbilityArgumentType["percentage"] = 2] = "percentage";
+})(PassiveAbilityArgumentType = exports.PassiveAbilityArgumentType || (exports.PassiveAbilityArgumentType = {}));
+
+
+/***/ }),
+
+/***/ "./src/game/items/passive-ability-generator-service.ts":
+/*!*************************************************************!*\
+  !*** ./src/game/items/passive-ability-generator-service.ts ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const passive_ability_generator_1 = __webpack_require__(/*! ./passive-ability-generator */ "./src/game/items/passive-ability-generator.ts");
+const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+class PassiveAbilityGeneratorService {
+    initialize() {
+        this.increasedArmor = this.createGeneratorWithSingleIntegerArgument({
+            abilityType: game_services_1.GameServices.passiveAbilityTypes.increasedArmor,
+            argumentKey: 'armor',
+            min: 2,
+            max: 6
+        });
+        this.increasedAttackDamage = this.createGeneratorWithSingleIntegerArgument({
+            abilityType: game_services_1.GameServices.passiveAbilityTypes.increasedAttackDamage,
+            argumentKey: 'attack-damage',
+            min: 5,
+            max: 10
+        });
+    }
+    createGeneratorWithSingleIntegerArgument(options) {
+        return passive_ability_generator_1.PassiveAbilityGenerator.create({
+            generateDbAbility: (itemLevel) => {
+                const actualMin = options.min + itemLevel;
+                const actualMax = options.max + itemLevel;
+                const actual = game_services_1.GameServices.random.randomInteger(actualMin, actualMax);
+                const args = {};
+                args[options.argumentKey] = actual;
+                return {
+                    typeKey: options.abilityType.key,
+                    args: args
+                };
+            }
+        });
+    }
+}
+exports.PassiveAbilityGeneratorService = PassiveAbilityGeneratorService;
+
+
+/***/ }),
+
+/***/ "./src/game/items/passive-ability-generator.ts":
+/*!*****************************************************!*\
+  !*** ./src/game/items/passive-ability-generator.ts ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+class PassiveAbilityGenerator {
+    static create(options) {
+        const generator = new PassiveAbilityGenerator();
+        generator.generateDbAbility = options.generateDbAbility;
+        return generator;
+    }
+}
+exports.PassiveAbilityGenerator = PassiveAbilityGenerator;
+
+
+/***/ }),
+
+/***/ "./src/game/items/passive-ability-type-service.ts":
+/*!********************************************************!*\
+  !*** ./src/game/items/passive-ability-type-service.ts ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const passive_ability_type_1 = __webpack_require__(/*! ./passive-ability-type */ "./src/game/items/passive-ability-type.ts");
+const passive_ability_argument_type_1 = __webpack_require__(/*! ./passive-ability-argument-type */ "./src/game/items/passive-ability-argument-type.ts");
+const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+class PassiveAbilityTypeService {
+    initialize() {
+        this.increasedAttackDamage = passive_ability_type_1.PassiveAbilityType.create({
+            key: 'increased-attack-damage',
+            argumentTypes: {
+                'attack-damage': passive_ability_argument_type_1.PassiveAbilityArgumentType.integer
+            },
+            getDescription: (ability) => {
+                return `Increases attack damage by ${this.printArgument(ability, 'attack-damage')}`;
+            },
+            applyEffect: (ability, owner) => {
+                const increase = ability.args['attack-damage'];
+                owner.attributes.attackDamage.setAdditiveModifier(ability, increase);
+            },
+            removeEffect: (ability, owner) => {
+                owner.attributes.attackDamage.removeAllModifiers(ability);
+            }
+        });
+        this.increasedArmor = passive_ability_type_1.PassiveAbilityType.create({
+            key: 'increased-armor',
+            argumentTypes: {
+                'armor': passive_ability_argument_type_1.PassiveAbilityArgumentType.integer
+            },
+            getDescription: (ability) => {
+                return `Increases armor by ${this.printArgument(ability, 'armor')}`;
+            },
+            applyEffect: (ability, owner) => {
+                const increase = ability.args['armor'];
+                owner.attributes.armor.setAdditiveModifier(ability, increase);
+            },
+            removeEffect: (ability, owner) => {
+                owner.attributes.armor.removeAllModifiers(ability);
+            }
+        });
+        this.allPassiveAbilityTypes = [
+            this.increasedAttackDamage,
+            this.increasedArmor
+        ];
+    }
+    printArgument(ability, argumentKey) {
+        const argumentType = ability.type.argumentTypes[argumentKey];
+        const argumentValue = ability.args[argumentKey];
+        switch (argumentType) {
+            case passive_ability_argument_type_1.PassiveAbilityArgumentType.decimal:
+                return game_services_1.GameServices.numberFormatting.formatDecimal(argumentValue);
+            case passive_ability_argument_type_1.PassiveAbilityArgumentType.integer:
+                return game_services_1.GameServices.numberFormatting.formatInteger(argumentValue);
+            case passive_ability_argument_type_1.PassiveAbilityArgumentType.percentage:
+                const argumentValueAsPercent = argumentValue * 100;
+                return game_services_1.GameServices.numberFormatting.formatDecimal(argumentValueAsPercent);
+            default:
+                throw new Error('Unknown argument type: ' + argumentType);
+        }
+    }
+    getByKey(key) {
+        return this.allPassiveAbilityTypes.find(type => type.key === key);
+    }
+}
+exports.PassiveAbilityTypeService = PassiveAbilityTypeService;
+
+
+/***/ }),
+
+/***/ "./src/game/items/passive-ability-type.ts":
+/*!************************************************!*\
+  !*** ./src/game/items/passive-ability-type.ts ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+class PassiveAbilityType {
+    static create(options) {
+        const abilityType = new PassiveAbilityType();
+        abilityType.key = options.key;
+        abilityType.argumentTypes = options.argumentTypes;
+        abilityType.getDescription = options.getDescription;
+        abilityType.applyEffect = options.applyEffect;
+        abilityType.removeEffect = options.removeEffect;
+        return abilityType;
+    }
+}
+exports.PassiveAbilityType = PassiveAbilityType;
+
+
+/***/ }),
+
+/***/ "./src/game/items/passive-ability.ts":
+/*!*******************************************!*\
+  !*** ./src/game/items/passive-ability.ts ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+class PassiveAbility {
+    get args() {
+        return this.dbModel.args;
+    }
+    static load(dbModel) {
+        const passiveAbility = new PassiveAbility();
+        passiveAbility.dbModel = dbModel;
+        passiveAbility.type = game_services_1.GameServices.passiveAbilityTypes.getByKey(dbModel.typeKey);
+        return passiveAbility;
+    }
+}
+exports.PassiveAbility = PassiveAbility;
 
 
 /***/ }),
@@ -1207,23 +1861,20 @@ exports.Hero = Hero;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const monster_1 = __webpack_require__(/*! ./monster */ "./src/game/monsters/monster.ts");
 class MonsterService {
-    createMonster(level, type) {
-        const dbMonster = this.createDBMonster(level, type);
-        const monster = new monster_1.Monster();
-        monster.load(dbMonster);
-        return monster;
+    constructor() {
+        this.nextMonsterId = 1;
     }
     createDBMonster(level, type) {
         const dbMonster = {
+            id: this.nextMonsterId++,
             typeKey: type.key,
             level: level,
             isAlive: true,
             skills: type.skillTypes.map(skillType => {
                 return {
                     remainingCooldown: 0,
-                    typeKey: skillType.key
+                    typeKey: skillType.value.key
                 };
             })
         };
@@ -1266,7 +1917,7 @@ class MonsterTypeService {
                 armor: 0.4,
                 maximumHealth: 20
             }),
-            skillTypes: [game_services_1.GameServices.skillTypes.basicAttack]
+            skillTypes: [{ weight: 500, value: game_services_1.GameServices.skillTypes.basicAttack }]
         });
         this.snake = monster_type_1.MonsterType.create({
             key: 'snake',
@@ -1275,14 +1926,14 @@ class MonsterTypeService {
             imageName: 'snake.png',
             attributesBase: attributes_1.Attributes.create({
                 attackDamage: 15,
-                attackSpeed: 2.0,
+                attackSpeed: 1.8,
                 maximumHealth: 200
             }),
             attributesPerLevel: attributes_1.Attributes.create({
                 attackDamage: 2,
                 maximumHealth: 12
             }),
-            skillTypes: [game_services_1.GameServices.skillTypes.basicAttack]
+            skillTypes: [{ weight: 500, value: game_services_1.GameServices.skillTypes.basicAttack }]
         });
         this.allMonsterTypes = [
             this.wolf,
@@ -1337,14 +1988,17 @@ exports.MonsterType = MonsterType;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const attributes_1 = __webpack_require__(/*! ../attributes/attributes */ "./src/game/attributes/attributes.ts");
-const Observable_1 = __webpack_require__(/*! ../../common/Observable */ "./src/common/Observable.ts");
+const observable_1 = __webpack_require__(/*! ../../common/observable */ "./src/common/observable.ts");
 const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
 const skill_1 = __webpack_require__(/*! ../skills/skill */ "./src/game/skills/skill.ts");
 class Monster {
     constructor() {
-        this.onDeath = Observable_1.ObservableFactory.create();
+        this.onDeath = observable_1.ObservableFactory.create();
+        this.onDamageTaken = observable_1.ObservableFactory.createWith1Argument();
     }
     get id() { return this.dbModel.id; }
+    get name() { return this.type.name; }
+    get isAlive() { return this.dbModel.isAlive; }
     get currentHealth() {
         return this.dbModel.currentHealth;
     }
@@ -1355,19 +2009,40 @@ class Monster {
             this.onDeath.notify();
         }
     }
-    load(dbMonster) {
-        this.dbModel = dbMonster;
-        this.attributes = attributes_1.Attributes.create();
-        this.type = game_services_1.GameServices.monsterTypes.getByKey(this.dbModel.typeKey);
-        this.skills = this.dbModel.skills.map(dbSkill => {
-            const skill = new skill_1.Skill();
-            skill.load(dbSkill);
-            return skill;
+    static load(dbMonster) {
+        const monster = new Monster();
+        monster.dbModel = dbMonster;
+        monster.type = game_services_1.GameServices.monsterTypes.getByKey(monster.dbModel.typeKey);
+        monster.attributes = attributes_1.Attributes.create();
+        monster.type.attributesBase.all.forEach(baseAttribute => monster.attributes.get(baseAttribute.type).amount.setAdditiveValueContainer(baseAttribute.amount));
+        monster.attributesFromLevel = attributes_1.Attributes.create();
+        monster.type.attributesPerLevel.all.forEach(perLevelAttribute => {
+            const attributeFromLevelValueContainer = monster.attributesFromLevel.get(perLevelAttribute.type).amount;
+            attributeFromLevelValueContainer.setAdditiveValueContainer(perLevelAttribute.amount);
+            attributeFromLevelValueContainer.setMultiplicativeModifier(monster, monster.dbModel.level);
+            monster.attributes.get(perLevelAttribute.type).amount.setAdditiveValueContainer(attributeFromLevelValueContainer);
         });
+        monster.skills = monster.dbModel.skills.map(skill_1.Skill.load);
+        monster.skills.forEach(skill => skill.type.setUpValueContainers(monster, skill));
+        if (dbMonster.currentHealth === undefined) {
+            dbMonster.currentHealth = monster.attributes.maximumHealth.value;
+        }
+        return monster;
     }
     recalculateAttributes() {
         this.type.attributesBase.all.forEach(attr => this.attributes.get(attr.type).amount.setAdditiveModifier(attr, attr.amount.value));
         this.type.attributesPerLevel.all.forEach(attr => this.attributes.get(attr.type).amount.setAdditiveModifier(attr, attr.amount.value * this.dbModel.level));
+    }
+    takeDamage(amount, type) {
+        this.currentHealth -= amount;
+        if (this.currentHealth <= 0) {
+            this.currentHealth = 0;
+            this.dbModel.isAlive = false;
+        }
+        this.onDamageTaken.notify({
+            amount: amount,
+            type: type
+        });
     }
 }
 exports.Monster = Monster;
@@ -1398,8 +2073,21 @@ class RandomService {
             }
         }
     }
+    getRandomElement(array) {
+        const index = this.randomInteger(0, array.length - 1);
+        return array[index];
+    }
     rollSuccess(successChance) {
         return Math.random() < successChance;
+    }
+    randomInteger(min, max) {
+        const rolledValue = Math.random() * (max - min + 1) + min;
+        const roundedRolledValue = Math.floor(rolledValue);
+        return roundedRolledValue;
+    }
+    randomDecimal(min, max) {
+        const rolledValue = Math.random() * (max - min) + min;
+        return rolledValue;
     }
 }
 exports.RandomService = RandomService;
@@ -1417,7 +2105,7 @@ exports.RandomService = RandomService;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const Observable_1 = __webpack_require__(/*! ../../common/Observable */ "./src/common/Observable.ts");
+const observable_1 = __webpack_require__(/*! ../../common/observable */ "./src/common/observable.ts");
 class ValueModifier {
     constructor(key, amount) {
         this.amount = amount;
@@ -1427,9 +2115,11 @@ class ValueModifier {
 class ValueContainer {
     constructor(baseValue) {
         this.additiveModifiers = [];
+        this.additiveValueContainers = [];
         this.multiplicativeModifiers = [];
+        this.multiplicativeValueContainers = [];
         this.value = 0;
-        this.onValueChange = Observable_1.ObservableFactory.createWith1Argument();
+        this.onValueChange = observable_1.ObservableFactory.createWith1Argument();
         if (baseValue !== undefined) {
             this.setAdditiveModifier(this, baseValue);
         }
@@ -1439,8 +2129,12 @@ class ValueContainer {
         this.additiveModifiers.forEach(mod => newValue += mod.amount);
         this.multiplicativeModifiers.forEach(mod => newValue *= mod.amount);
         if (this.value !== newValue) {
+            const valueChange = {
+                previousValue: this.value,
+                newValue: newValue
+            };
             this.value = newValue;
-            this.onValueChange.notify(newValue);
+            this.onValueChange.notify(valueChange);
         }
     }
     setAdditiveModifier(key, amount) {
@@ -1454,6 +2148,18 @@ class ValueContainer {
         }
         this.recalculateValue();
     }
+    setAdditiveValueContainer(valueContainer) {
+        const exists = this.additiveValueContainers.includes(valueContainer);
+        if (!exists) {
+            this.additiveValueContainers.push(valueContainer);
+            this.setAdditiveModifier(valueContainer, valueContainer.value);
+            this.recalculateValue();
+            valueContainer.onValueChange.addSubscription(this, valueChange => {
+                this.setAdditiveModifier(valueContainer, valueChange.newValue);
+                this.recalculateValue();
+            });
+        }
+    }
     setMultiplicativeModifier(key, amount) {
         const existingModifier = this.multiplicativeModifiers.find(mod => mod.key === key);
         if (existingModifier) {
@@ -1465,9 +2171,23 @@ class ValueContainer {
         }
         this.recalculateValue();
     }
+    setMultiplicativeValueContainer(valueContainer) {
+        const exists = this.multiplicativeValueContainers.includes(valueContainer);
+        if (!exists) {
+            this.multiplicativeValueContainers.push(valueContainer);
+            this.setMultiplicativeModifier(valueContainer, valueContainer.value);
+            this.recalculateValue();
+            valueContainer.onValueChange.addSubscription(this, valueChange => {
+                this.setMultiplicativeModifier(valueContainer, valueChange.newValue);
+                this.recalculateValue();
+            });
+        }
+    }
     removeAllModifiers(key) {
         this.additiveModifiers = this.additiveModifiers.filter(mod => mod.key !== key);
+        this.additiveValueContainers = this.additiveValueContainers.filter(vc => vc !== key);
         this.multiplicativeModifiers = this.multiplicativeModifiers.filter(mod => mod.key !== key);
+        this.multiplicativeValueContainers = this.multiplicativeValueContainers.filter(vc => vc !== key);
     }
 }
 exports.ValueContainer = ValueContainer;
@@ -1494,6 +2214,24 @@ var DamageType;
 
 /***/ }),
 
+/***/ "./src/game/skills/skill-tag.ts":
+/*!**************************************!*\
+  !*** ./src/game/skills/skill-tag.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var SkillTag;
+(function (SkillTag) {
+    SkillTag[SkillTag["attack"] = 0] = "attack";
+})(SkillTag = exports.SkillTag || (exports.SkillTag = {}));
+
+
+/***/ }),
+
 /***/ "./src/game/skills/skill-type-service.ts":
 /*!***********************************************!*\
   !*** ./src/game/skills/skill-type-service.ts ***!
@@ -1507,15 +2245,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const skill_type_1 = __webpack_require__(/*! ./skill-type */ "./src/game/skills/skill-type.ts");
 const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
 const damage_type_1 = __webpack_require__(/*! ./damage-type */ "./src/game/skills/damage-type.ts");
+const skill_tag_1 = __webpack_require__(/*! ./skill-tag */ "./src/game/skills/skill-tag.ts");
+const value_container_1 = __webpack_require__(/*! ../shared/value-container */ "./src/game/shared/value-container.ts");
 class SkillTypeService {
     initialize() {
         this.basicAttack = skill_type_1.SkillType.create({
             key: "basic-attack",
             name: 'Attack',
             description: 'Deals physical damage to a single enemy',
+            imageName: 'basic-attack.png',
             cooldown: 1000,
             energyCost: 0,
-            requiresTarget: true,
+            canTargetEnemy: true,
+            canTargetFriend: false,
+            tags: [skill_tag_1.SkillTag.attack],
             effect: (user, target, arenaRoom) => {
                 let damage = user.attributes.attackDamage.value;
                 const isCriticalStrike = game_services_1.GameServices.random.rollSuccess(user.attributes.attackCriticalMultiplier.value);
@@ -1523,6 +2266,13 @@ class SkillTypeService {
                     damage *= user.attributes.attackCriticalMultiplier.value;
                 }
                 this.dealDamage(target, damage, damage_type_1.DamageType.physical);
+            },
+            setUpValueContainers: (character, skill) => {
+                const attackSpeedMultiplier = new value_container_1.ValueContainer();
+                attackSpeedMultiplier.setAdditiveValueContainer(character.attributes.attackSpeed);
+                skill.cooldown.setMultiplicativeModifier(attackSpeedMultiplier, 1 / attackSpeedMultiplier.value);
+                attackSpeedMultiplier.onValueChange.addSubscription(attackSpeedMultiplier, event => skill.cooldown.setMultiplicativeModifier(attackSpeedMultiplier, 1 / event.newValue));
+                skill.cooldown.setMultiplicativeValueContainer(attackSpeedMultiplier);
             }
         });
         this.allSkillTypes = [
@@ -1536,12 +2286,12 @@ class SkillTypeService {
         switch (damageType) {
             case damage_type_1.DamageType.physical: {
                 const damageReceived = this.reduceDamageBasedOnArmor(damage, damageReceiver.attributes.armor.value);
-                damageReceiver.currentHealth -= damageReceived;
+                damageReceiver.takeDamage(damageReceived, damageType);
                 break;
             }
             case damage_type_1.DamageType.magic: {
-                const damageReceived = this.reduceDamageBasedOnArmor(damage, damageReceiver.attributes.armor.value);
-                damageReceiver.currentHealth -= damageReceived;
+                const damageReceived = this.reduceDamageBasedOnMagicResistance(damage, damageReceiver.attributes.magicResistance.value);
+                damageReceiver.takeDamage(damageReceived, damageType);
                 break;
             }
             default:
@@ -1571,15 +2321,20 @@ exports.SkillTypeService = SkillTypeService;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 class SkillType {
+    get requiresTarget() { return this.canTargetEnemy || this.canTargetFriend; }
     static create(options) {
         const skillType = new SkillType();
         skillType.key = options.key;
         skillType.name = options.name;
         skillType.description = options.description;
+        skillType.imageName = options.imageName;
         skillType.cooldown = options.cooldown;
         skillType.energyCost = options.energyCost;
-        skillType.requiresTarget = options.requiresTarget;
+        skillType.canTargetEnemy = options.canTargetEnemy;
+        skillType.canTargetFriend = options.canTargetFriend;
+        skillType.tags = options.tags;
         skillType.effect = options.effect;
+        skillType.setUpValueContainers = options.setUpValueContainers;
         return skillType;
     }
 }
@@ -1599,10 +2354,44 @@ exports.SkillType = SkillType;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const game_services_1 = __webpack_require__(/*! ../game-services */ "./src/game/game-services.ts");
+const observable_1 = __webpack_require__(/*! ../../common/observable */ "./src/common/observable.ts");
+const value_container_1 = __webpack_require__(/*! ../shared/value-container */ "./src/game/shared/value-container.ts");
 class Skill {
-    load(dbModel) {
-        this.dbModel = dbModel;
-        this.type = game_services_1.GameServices.skillTypes.getByKey(this.dbModel.typeKey);
+    constructor() {
+        this.cooldown = new value_container_1.ValueContainer();
+        this.onCooldownChanged = observable_1.ObservableFactory.createWith1Argument();
+    }
+    get remainingCooldown() { return this.dbModel.remainingCooldown; }
+    get isReady() { return this.dbModel.remainingCooldown === 0; }
+    static load(dbModel) {
+        const skill = new Skill();
+        skill.dbModel = dbModel;
+        skill.type = game_services_1.GameServices.skillTypes.getByKey(skill.dbModel.typeKey);
+        skill.cooldown.setAdditiveModifier(skill.type, skill.type.cooldown);
+        return skill;
+    }
+    resetCooldown() {
+        const previousRemainingCooldown = this.dbModel.remainingCooldown;
+        const newReminingCooldown = this.cooldown.value;
+        this.dbModel.remainingCooldown = newReminingCooldown;
+        this.onCooldownChanged.notify({
+            previousValue: previousRemainingCooldown,
+            newValue: newReminingCooldown
+        });
+    }
+    reduceCooldown(time) {
+        const previousRemainingCooldown = this.dbModel.remainingCooldown;
+        let newReminingCooldown = previousRemainingCooldown - time;
+        if (newReminingCooldown <= 0) {
+            newReminingCooldown = 0;
+        }
+        if (previousRemainingCooldown !== newReminingCooldown) {
+            this.dbModel.remainingCooldown = newReminingCooldown;
+            this.onCooldownChanged.notify({
+                previousValue: previousRemainingCooldown,
+                newValue: newReminingCooldown
+            });
+        }
     }
 }
 exports.Skill = Skill;
@@ -1633,6 +2422,280 @@ exports.VersionService = VersionService;
 
 /***/ }),
 
+/***/ "./src/rendering/react/combat/combat.scss":
+/*!************************************************!*\
+  !*** ./src/rendering/react/combat/combat.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./combat.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rendering/react/combat/combat.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
+/***/ "./src/rendering/react/combat/ui-combat-arena-character.tsx":
+/*!******************************************************************!*\
+  !*** ./src/rendering/react/combat/ui-combat-arena-character.tsx ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = __webpack_require__(/*! react */ "react");
+const ui_progress_bar_1 = __webpack_require__(/*! ../shared/ui-progress-bar */ "./src/rendering/react/shared/ui-progress-bar.tsx");
+const hero_1 = __webpack_require__(/*! ../../../game/heroes/hero */ "./src/game/heroes/hero.ts");
+class UICombatArenaCharacter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentHealth: props.character.currentHealth,
+            isAlive: props.character.isAlive
+        };
+    }
+    componentDidMount() {
+        this.props.character.onDamageTaken.addSubscription(this, event => this.setState({
+            currentHealth: this.props.character.currentHealth,
+            isAlive: this.props.character.isAlive
+        }));
+    }
+    componentWillUnmount() {
+        this.props.character.onDamageTaken.removeSubscription(this);
+    }
+    getImageFolderPath() {
+        return this.props.character instanceof hero_1.Hero
+            ? 'img/heroes/'
+            : 'img/monsters/';
+    }
+    getImageName() {
+        return this.state.isAlive ? this.props.character.type.imageName : "tombstone.png";
+    }
+    render() {
+        return (React.createElement("div", { className: "character" },
+            React.createElement("div", { className: "character-name" }, this.props.character.name),
+            React.createElement(ui_progress_bar_1.UIProgressBar, { min: 0, max: this.props.character.attributes.maximumHealth.value, current: this.state.currentHealth }),
+            React.createElement("div", { className: "character-image", style: { backgroundImage: `url(${this.getImageFolderPath()}${this.getImageName()})` } })));
+    }
+}
+exports.UICombatArenaCharacter = UICombatArenaCharacter;
+
+
+/***/ }),
+
+/***/ "./src/rendering/react/combat/ui-combat-arena-skill.tsx":
+/*!**************************************************************!*\
+  !*** ./src/rendering/react/combat/ui-combat-arena-skill.tsx ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = __webpack_require__(/*! react */ "react");
+class UICombatArenaSkill extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            remainingCooldown: props.skill.remainingCooldown
+        };
+    }
+    componentDidMount() {
+        this.props.skill.onCooldownChanged.addSubscription(this, event => this.setState({
+            remainingCooldown: this.props.skill.remainingCooldown
+        }));
+    }
+    componentWillUnmount() {
+        this.props.skill.onCooldownChanged.removeSubscription(this);
+    }
+    render() {
+        return (React.createElement("div", { key: this.props.skill.type.key, className: "skill-container", onClick: () => this.props.onSkillSelected(), style: { opacity: 1 - this.state.remainingCooldown / this.props.skill.type.cooldown } },
+            React.createElement("div", { className: "skill-name" }, this.props.skill.type.name),
+            React.createElement("div", { className: "skill-image", style: { backgroundImage: `url(img/skills/${this.props.skill.type.imageName})` } })));
+    }
+}
+exports.UICombatArenaSkill = UICombatArenaSkill;
+
+
+/***/ }),
+
+/***/ "./src/rendering/react/combat/ui-combat-arena.tsx":
+/*!********************************************************!*\
+  !*** ./src/rendering/react/combat/ui-combat-arena.tsx ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = __webpack_require__(/*! react */ "react");
+const ui_combat_arena_character_1 = __webpack_require__(/*! ./ui-combat-arena-character */ "./src/rendering/react/combat/ui-combat-arena-character.tsx");
+const ui_combat_arena_skill_1 = __webpack_require__(/*! ./ui-combat-arena-skill */ "./src/rendering/react/combat/ui-combat-arena-skill.tsx");
+class UICombatArena extends React.Component {
+    constructor(props) {
+        super(props);
+        this.heroContainerStyles = [{
+                left: '10px',
+                bottom: '10px',
+                zIndex: 12
+            }, {
+                left: '150px',
+                bottom: '100px',
+                zIndex: 11
+            }, {
+                left: '290px',
+                bottom: '190px',
+                zIndex: 10
+            }];
+        this.monsterContainerStyles = [{
+                right: '10px',
+                bottom: '10px',
+                zIndex: 12
+            }, {
+                right: '150px',
+                bottom: '100px',
+                zIndex: 11
+            }, {
+                right: '290px',
+                bottom: '190px',
+                zIndex: 10
+            }];
+        this.state = {
+            selectedHero: props.arena.currentRoom.heroes[0],
+            selectedSkill: null,
+            isChoosingTarget: false,
+            legalTargets: [],
+            hasPlayerLost: props.arena.hasPlayerLost,
+            hasPlayerWon: false
+        };
+        this.props.arena.onPlayerLose.addSubscription(this, () => this.onPlayerLose());
+    }
+    selectSkill(skill) {
+        let legalTargets = [];
+        const friendTargets = this.props.arena.currentRoom.heroes.filter(hero => hero.isAlive);
+        const enemyTargets = this.props.arena.currentRoom.currentEncounter.monsters.filter(monster => monster.isAlive);
+        if (skill.type.canTargetFriend) {
+            legalTargets = legalTargets.concat(friendTargets);
+        }
+        if (skill.type.canTargetEnemy) {
+            legalTargets = legalTargets.concat(enemyTargets);
+        }
+        this.setState({
+            selectedSkill: skill,
+            isChoosingTarget: true,
+            legalTargets: legalTargets
+        });
+    }
+    onClickOnCharacter(target) {
+        if (this.state.isChoosingTarget && this.state.legalTargets.includes(target)) {
+            this.props.arena.useSkill(this.state.selectedHero, target, this.state.selectedSkill);
+        }
+    }
+    onPlayerLose() {
+        this.setState({
+            hasPlayerLost: true
+        });
+    }
+    render() {
+        return (React.createElement("div", { className: "arena", style: { backgroundImage: `url(img/arenas/${this.props.arena.type.imageName})` } },
+            React.createElement("div", { className: "header" },
+                React.createElement("div", { className: "room-info" },
+                    React.createElement("div", { className: "room-name" }, "[RoomName]"),
+                    React.createElement("div", { className: "room-progress" }, `Room ${this.props.arena.currentRoomIndex + 1}/${this.props.arena.rooms.length}`),
+                    React.createElement("div", { className: "encounter-progress" }, `Encounter ${this.props.arena.currentRoom.currentEncounterIndex + 1}/${this.props.arena.currentRoom.encounters.length}`)),
+                React.createElement("div", { className: "arena-info" },
+                    React.createElement("div", { className: "arena-name" }, this.props.arena.type.name),
+                    React.createElement("div", { className: "arena-level" }, `Level ${this.props.arena.level}`))),
+            React.createElement("div", { className: "body" },
+                this.props.arena.currentRoom.heroes.map((hero, index) => React.createElement("div", { key: hero.id, className: `character-container selectable ${this.state.selectedHero === hero ? 'selected' : ''} ${(this.state.isChoosingTarget && this.state.legalTargets.includes(hero)) ? 'legal-target' : ''}`, style: this.heroContainerStyles[index], onClick: () => this.onClickOnCharacter(hero) },
+                    React.createElement(ui_combat_arena_character_1.UICombatArenaCharacter, { character: hero }))),
+                this.props.arena.currentRoom.currentEncounter.monsters.map((monster, index) => React.createElement("div", { key: monster.id, className: `character-container ${(this.state.isChoosingTarget && this.state.legalTargets.includes(monster)) ? 'legal-target' : ''}`, style: this.monsterContainerStyles[index], onClick: () => this.onClickOnCharacter(monster) },
+                    React.createElement(ui_combat_arena_character_1.UICombatArenaCharacter, { character: monster })))),
+            React.createElement("div", { className: "footer" },
+                React.createElement("div", { className: "skills-container" }, this.state.selectedHero.skills.map(skill => React.createElement(ui_combat_arena_skill_1.UICombatArenaSkill, { key: skill.type.key, skill: skill, onSkillSelected: () => this.selectSkill(skill) })))),
+            this.state.hasPlayerLost
+                ?
+                    React.createElement("div", { className: "overlay" },
+                        React.createElement("div", null,
+                            React.createElement("div", null, "You died!"),
+                            React.createElement("button", null, "Resurrect")))
+                : null));
+    }
+}
+exports.UICombatArena = UICombatArena;
+
+
+/***/ }),
+
+/***/ "./src/rendering/react/combat/ui-combat-body.tsx":
+/*!*******************************************************!*\
+  !*** ./src/rendering/react/combat/ui-combat-body.tsx ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = __webpack_require__(/*! react */ "react");
+const game_services_1 = __webpack_require__(/*! ../../../game/game-services */ "./src/game/game-services.ts");
+const ui_combat_arena_1 = __webpack_require__(/*! ./ui-combat-arena */ "./src/rendering/react/combat/ui-combat-arena.tsx");
+class UICombatBody extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedArena: game_services_1.GameServices.currentGame.arenas.length > 0
+                ? game_services_1.GameServices.currentGame.arenas[0]
+                : null
+        };
+    }
+    get arenas() {
+        return game_services_1.GameServices.currentGame.arenas;
+    }
+    setSelectedArena(arena) {
+        this.setState({
+            selectedArena: arena
+        });
+    }
+    render() {
+        return (React.createElement("div", { id: "combat-body-container" },
+            React.createElement("div", { className: "arenas-container" },
+                React.createElement("ul", { className: "arenas" }, this.arenas.map((arena, index) => React.createElement("li", { key: index, className: "arena", onClick: () => this.setSelectedArena(arena) },
+                    React.createElement("div", null, arena.type.name))))),
+            this.state.selectedArena
+                ?
+                    React.createElement("div", { className: "selected-arena-container" },
+                        React.createElement(ui_combat_arena_1.UICombatArena, { arena: this.state.selectedArena }))
+                : null));
+    }
+}
+exports.UICombatBody = UICombatBody;
+
+
+/***/ }),
+
 /***/ "./src/rendering/react/general.scss":
 /*!******************************************!*\
   !*** ./src/rendering/react/general.scss ***!
@@ -1642,6 +2705,37 @@ exports.VersionService = VersionService;
 
 var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
             var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./general.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rendering/react/general.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
+/***/ "./src/rendering/react/heroes/heroes.scss":
+/*!************************************************!*\
+  !*** ./src/rendering/react/heroes/heroes.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./heroes.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/rendering/react/heroes/heroes.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -1706,6 +2800,8 @@ const React = __webpack_require__(/*! react */ "react");
 const ReactDOM = __webpack_require__(/*! react-dom */ "react-dom");
 __webpack_require__(/*! ./general.scss */ "./src/rendering/react/general.scss");
 __webpack_require__(/*! ./structure.scss */ "./src/rendering/react/structure.scss");
+__webpack_require__(/*! ./combat/combat.scss */ "./src/rendering/react/combat/combat.scss");
+__webpack_require__(/*! ./heroes/heroes.scss */ "./src/rendering/react/heroes/heroes.scss");
 __webpack_require__(/*! ./map/map.scss */ "./src/rendering/react/map/map.scss");
 const ui_game_1 = __webpack_require__(/*! ./ui-game */ "./src/rendering/react/ui-game.tsx");
 const game_services_1 = __webpack_require__(/*! ../../game/game-services */ "./src/game/game-services.ts");
@@ -1861,7 +2957,7 @@ class UIMapBody extends React.Component {
         return (React.createElement("div", { id: "map-body-container" },
             React.createElement("div", { className: "info-panel" }, this.state.selectedArenaType
                 ?
-                    React.createElement(ui_map_arena_type_information_1.UIMapArenaTypeInformation, { arenaType: this.state.selectedArenaType, arenaStarted: () => { } })
+                    React.createElement(ui_map_arena_type_information_1.UIMapArenaTypeInformation, { arenaType: this.state.selectedArenaType, arenaStarted: (arena) => { this.props.arenaStarted(arena); } })
                 : null),
             React.createElement("div", { className: "map-container" },
                 React.createElement(ui_draggable_container_1.UIDraggableContainer, null,
@@ -2019,14 +3115,14 @@ class UIDraggableContainer extends React.Component {
             }
         });
     }
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.documentKeyDownHandler = (event) => { this.handleKeyDown(event.keyCode); };
         this.documentKeyUpHandler = (event) => { this.handleKeyUp(event.keyCode); };
         this.updateIntervalID = setInterval(() => this.update(50), 50);
         document.addEventListener("keydown", this.documentKeyDownHandler, false);
         document.addEventListener("keyup", this.documentKeyUpHandler, false);
     }
-    componentWillUnmount() {
+    UNSAFE_componentWillUnmount() {
         clearInterval(this.updateIntervalID);
         document.removeEventListener("keydown", this.documentKeyDownHandler, false);
         document.removeEventListener("keyup", this.documentKeyUpHandler, false);
@@ -2045,6 +3141,31 @@ class UIDraggableContainer extends React.Component {
     }
 }
 exports.UIDraggableContainer = UIDraggableContainer;
+
+
+/***/ }),
+
+/***/ "./src/rendering/react/shared/ui-progress-bar.tsx":
+/*!********************************************************!*\
+  !*** ./src/rendering/react/shared/ui-progress-bar.tsx ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = __webpack_require__(/*! react */ "react");
+class UIProgressBar extends React.Component {
+    getFillPercentage() {
+        return 100 * (this.props.max - this.props.current) / (this.props.max - this.props.min);
+    }
+    render() {
+        return (React.createElement("div", { className: "progress-bar" },
+            React.createElement("div", { className: "bar", style: { width: this.getFillPercentage() + '%' } })));
+    }
+}
+exports.UIProgressBar = UIProgressBar;
 
 
 /***/ }),
@@ -2121,6 +3242,7 @@ const React = __webpack_require__(/*! react */ "react");
 const ui_tab_button_1 = __webpack_require__(/*! ./shared/ui-tab-button */ "./src/rendering/react/shared/ui-tab-button.tsx");
 const ui_map_body_1 = __webpack_require__(/*! ./map/ui-map-body */ "./src/rendering/react/map/ui-map-body.tsx");
 const ui_heroes_body_1 = __webpack_require__(/*! ./heroes/ui-heroes-body */ "./src/rendering/react/heroes/ui-heroes-body.tsx");
+const ui_combat_body_1 = __webpack_require__(/*! ./combat/ui-combat-body */ "./src/rendering/react/combat/ui-combat-body.tsx");
 class UIBody extends React.Component {
     constructor(props) {
         super(props);
@@ -2156,9 +3278,9 @@ class UIBody extends React.Component {
             case 'heroes':
                 return React.createElement(ui_heroes_body_1.UIHeroesBody, null);
             case 'combat':
-                return null;
+                return React.createElement(ui_combat_body_1.UICombatBody, { selectedArena: null });
             case 'map':
-                return React.createElement(ui_map_body_1.UIMapBody, null);
+                return React.createElement(ui_map_body_1.UIMapBody, { arenaStarted: (arena) => { this.selectTab('combat'); } });
             case 'quests':
                 return null;
             default:

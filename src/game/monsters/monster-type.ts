@@ -1,5 +1,6 @@
 import { Attributes } from "../attributes/attributes";
 import { SkillType } from "../skills/skill-type";
+import { WeightedValue } from "../shared/weighted-value";
 
 export class MonsterType {
     public key: string;
@@ -8,7 +9,7 @@ export class MonsterType {
     public imageName: string;
     public attributesBase: Attributes;
     public attributesPerLevel: Attributes;
-    public skillTypes: SkillType[];
+    public skillTypes: WeightedValue<SkillType>[];
 
     public static create (options: {
         key: string,
@@ -17,7 +18,7 @@ export class MonsterType {
         imageName: string,
         attributesBase: Attributes,
         attributesPerLevel: Attributes,
-        skillTypes: SkillType[]
+        skillTypes: WeightedValue<SkillType>[]
     }): MonsterType {
         const monsterType = new MonsterType();
         monsterType.key = options.key;

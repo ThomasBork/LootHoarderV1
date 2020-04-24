@@ -25,7 +25,7 @@ export class MonsterTypeService {
                 armor: 0.4,
                 maximumHealth: 20
             }),
-            skillTypes: [GameServices.skillTypes.basicAttack]
+            skillTypes: [{weight: 500, value: GameServices.skillTypes.basicAttack}]
         });
 
         this.snake = MonsterType.create({
@@ -35,14 +35,14 @@ export class MonsterTypeService {
             imageName: 'snake.png',
             attributesBase: Attributes.create({
                 attackDamage: 15,
-                attackSpeed: 2.0,
+                attackSpeed: 1.8,
                 maximumHealth: 200
             }),
             attributesPerLevel: Attributes.create({
                 attackDamage: 2,
                 maximumHealth: 12
             }),
-            skillTypes: [GameServices.skillTypes.basicAttack]
+            skillTypes: [{weight: 500, value: GameServices.skillTypes.basicAttack}]
         });
 
         this.allMonsterTypes = [

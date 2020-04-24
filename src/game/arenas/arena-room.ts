@@ -1,24 +1,25 @@
 import { DBArenaRoom } from "../../game-state/db-arena-room";
-import { Monster } from "../monsters/monster";
-import { GameServices } from "../game-services";
 import { Hero } from "../heroes/hero";
+import { ArenaRoomEncounter } from "./arena-room-encounter";
 
 export class ArenaRoom {
     public dbModel: DBArenaRoom;
-    public monsters: Monster[];
+    public encounters: ArenaRoomEncounter[];
     public heroes: Hero[];
 
-    public get currentMonster () {
-        return this.monsters[this.dbModel.currentMonsterIndex];
+    public get currentEncounter(): ArenaRoomEncounter {
+        return this.encounters[this.dbModel.currentEncounterIndex];
     }
 
-    public load (dbArenaRoom: DBArenaRoom): void {
-        this.dbModel = dbArenaRoom;
-        this.monsters = this.dbModel.monsters.map(dbMonster => {
-            const monster = new Monster();
-            monster.load(dbMonster);
-            return monster;
-        });
+    public get currentEncounterIndex(): number { return this.dbModel.currentEncounterIndex; }
+
+    public get hasPlayerLost(): boolean { return this.heroes.every(hero => !hero.isAlive); }
+
+    public static load (dbArenaRoom: DBArenaRoom): ArenaRoom {
+        const arenaRoom = new ArenaRoom();
+        arenaRoom.dbModel = dbArenaRoom;
+        arenaRoom.encounters = arenaRoom.dbModel.encounters.map(ArenaRoomEncounter.load);
+        return arenaRoom;
     }
 
     public setHeroes(heroes: Hero[]): void {

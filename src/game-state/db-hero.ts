@@ -1,5 +1,7 @@
 import { DBSkill } from "./db-skill";
-import { DBArena } from "./db-arena";
+import { DBItem } from "./db-item";
+import { KeyValuePair } from "../game/shared/key-value-pair";
+import { ItemBodyLocation } from "../game/items/item-body-location";
 
 export interface DBHero {
     id: number;
@@ -10,4 +12,5 @@ export interface DBHero {
     currentHealth: number;
     isAlive: boolean;
     skills: DBSkill[];
+    items: KeyValuePair<ItemBodyLocation, DBItem>[];
 }

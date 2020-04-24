@@ -39,6 +39,10 @@ button {
     &:hover {
         background-color: #6666FF;
     }
+    &:active {
+        margin-top: 1px;
+        margin-left: 1px;
+    }
 }
 
 .large-list-card {
@@ -58,7 +62,6 @@ button {
 .progress-bar .bar {
     height: 100%;
     background-color: $blue;
-    display: block;
 }
 
 .draggable-container {

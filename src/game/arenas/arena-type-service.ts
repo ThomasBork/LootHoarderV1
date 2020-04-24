@@ -1,10 +1,10 @@
 import { ArenaType } from './arena-type';
 import { DBMonster } from '../../game-state/db-monster';
-import { ArenaRoom } from './arena-room';
 import { MonsterType } from '../monsters/monster-type';
 import { DBArenaRoom } from '../../game-state/db-arena-room';
 import { WeightedValue } from '../shared/weighted-value';
 import { GameServices } from '../game-services';
+import { DBArenaRoomEncounter } from '../../game-state/db-arena-room-encounter';
 
 export class ArenaTypeService {
     public allArenaTypes: ArenaType[];
@@ -17,11 +17,12 @@ export class ArenaTypeService {
                 imageName: 'forest.png',
                 position: {x: 0, y: 0},
                 level: 1,
-                spawnRooms: (level: number) => {
-                    return this.spawnRooms({
+                createDbRooms: (level: number) => {
+                    return this.createDbRooms({
                         level: level,
                         amountOfRooms: 10,
-                        amountOfMonstersInEachRoom: 5,
+                        amountOfEncountersInEachRoom: 5,
+                        amountOfMonstersInEachEncounter: 2,
                         monsterTypes: [
                             {
                                 weight: 20,
@@ -42,11 +43,12 @@ export class ArenaTypeService {
                 imageName: 'brushlands.png',
                 position: {x: 1, y: 0},
                 level: 5,
-                spawnRooms: (level: number) => {
-                    return this.spawnRooms({
+                createDbRooms: (level: number) => {
+                    return this.createDbRooms({
                         level: level,
                         amountOfRooms: 10,
-                        amountOfMonstersInEachRoom: 5,
+                        amountOfEncountersInEachRoom: 5,
+                        amountOfMonstersInEachEncounter: 2,
                         monsterTypes: [
                             {
                                 weight: 20,
@@ -67,29 +69,35 @@ export class ArenaTypeService {
         return this.allArenaTypes.find(type => type.key === key);
     }
 
-    private spawnRooms(settings: {
+    private createDbRooms(settings: {
         level: number,
         amountOfRooms: number,
-        amountOfMonstersInEachRoom: number,
+        amountOfEncountersInEachRoom: number,
+        amountOfMonstersInEachEncounter: number,
         monsterTypes: WeightedValue<MonsterType>[]
-    }): ArenaRoom[] {
-        const arenaRooms: ArenaRoom[] = [];
+    }): DBArenaRoom[] {
+        const dbArenaRooms: DBArenaRoom[] = [];
         for (let currentRoomIndex = 0; currentRoomIndex<settings.amountOfRooms; currentRoomIndex++) {
-            const dbMonsters: DBMonster[] = [];
-            for (let currentMonsterIndex = 0; currentMonsterIndex < settings.amountOfMonstersInEachRoom; currentMonsterIndex++) {
-                const monsterType = GameServices.random.getWeightedValue(settings.monsterTypes);
-                const dbMonster = GameServices.monsters.createDBMonster(settings.level, monsterType);
-                dbMonsters.push(dbMonster);
+            const dbEncounters: DBArenaRoomEncounter[] = [];
+            for (let currentEncounterIndex = 0; currentEncounterIndex < settings.amountOfEncountersInEachRoom; currentEncounterIndex++) {
+                const dbMonsters: DBMonster[] = [];
+                for (let currentMonsterIndex = 0; currentMonsterIndex < settings.amountOfMonstersInEachEncounter; currentMonsterIndex++) {
+                    const monsterType = GameServices.random.getWeightedValue(settings.monsterTypes);
+                    const dbMonster = GameServices.monsters.createDBMonster(settings.level, monsterType);
+                    dbMonsters.push(dbMonster);
+                }
+                const dbEncounter = <DBArenaRoomEncounter> {
+                    monsters: dbMonsters
+                };
+                dbEncounters.push(dbEncounter);
             }
             const dbArenaRoom = <DBArenaRoom> {
-                currentMonsterIndex: 0,
+                currentEncounterIndex: 0,
                 heroIds: [],
-                monsters: dbMonsters
+                encounters: dbEncounters
             };
-            const arenaRoom = new ArenaRoom();
-            arenaRoom.load(dbArenaRoom);
-            arenaRooms.push(arenaRoom);
+            dbArenaRooms.push(dbArenaRoom);
         }
-        return arenaRooms;
+        return dbArenaRooms;
     }
 }

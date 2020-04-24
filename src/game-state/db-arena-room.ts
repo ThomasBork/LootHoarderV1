@@ -1,9 +1,8 @@
-import { DBMonster } from "./db-monster";
-import { DBHero } from "./db-hero";
+import { DBArenaRoomEncounter } from "./db-arena-room-encounter";
 
 export interface DBArenaRoom {
     typeKey: string;
-    monsters: DBMonster[];
+    encounters: DBArenaRoomEncounter[];
     heroIds: number[];
-    currentMonsterIndex: number;
+    currentEncounterIndex: number;
 }

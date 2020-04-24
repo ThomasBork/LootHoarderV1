@@ -1,6 +1,12 @@
 export class NumberFormattingService {
-    public static postfixes = ['', 'k', 'm', 'b'];
-    public static Format(number: number, maxDecimals?: number, minDecimals?: number, ceil?: boolean): string {
+    private postfixes = ['', 'k', 'm', 'b'];
+    public formatInteger(n: number): string {
+        return this.format(n, 0);
+    }
+    public formatDecimal(n: number): string {
+        return this.format(n, 2);
+    }
+    public format(number: number, maxDecimals?: number, minDecimals?: number, ceil?: boolean): string {
         if (maxDecimals === undefined) {
             maxDecimals = 2;
         }
@@ -34,7 +40,7 @@ export class NumberFormattingService {
             numberString = roundedNumber.toString();
         }
 
-        const postfix = NumberFormattingService.postfixes[amountOfTimesTheNumberCanBeDividedBy1000];
+        const postfix = this.postfixes[amountOfTimesTheNumberCanBeDividedBy1000];
         if (postfix) {
             numberString += postfix;
         }

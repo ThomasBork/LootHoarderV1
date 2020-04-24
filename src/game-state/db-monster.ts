@@ -1,5 +1,4 @@
 import { DBSkill } from "./db-skill";
-import { DBArena } from "./db-arena";
 
 export interface DBMonster {
     id: number;

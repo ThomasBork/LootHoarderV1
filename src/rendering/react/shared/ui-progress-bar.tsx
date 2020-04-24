@@ -6,9 +6,9 @@ export class UIProgressBar extends React.Component<{min: number, max: number, cu
     }
     public render(): JSX.Element {
         return (
-            <span className="progress-bar">
-                <span className="bar" style={{width: this.getFillPercentage() + '%'}}></span>
-            </span>
+            <div className="progress-bar">
+                <div className="bar" style={{width: this.getFillPercentage() + '%'}}></div>
+            </div>
         );
     }
 }
